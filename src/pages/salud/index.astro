@@ -1,30 +1,19 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { catDirectory } from '../../data/content';
-const items = catDirectory['salud'] || [];
 ---
-<BaseLayout title="Salud puerto varas | Directorio completo" description="Directorio completo de salud en puerto varas. Direcciones, teléfonos y horarios.">
+<BaseLayout title="Salud puerto varas | Directorio completo" description="Directorio completo de salud en puerto varas. Direcciones, telefonos y horarios.">
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
       <span class="text-5xl mb-4 block">🏥</span>
       <h1 class="text-4xl lg:text-5xl font-black text-white mb-4">Salud</h1>
-      <p class="text-white/80 text-lg">Direcciones, teléfonos y horarios.</p>
+      <p class="text-white/80 text-lg">Direcciones, telefonos y horarios.</p>
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {(items || []).map((item) => (
-        <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow">
-          <div class="flex items-start justify-between mb-2">
-            <h2 class="font-bold text-gray-900">{item.name}</h2>
-            <span class="text-xs px-2 py-0.5 rounded-full {(typeColors as any)[item.type] || 'bg-gray-100 text-gray-600'}">{item.type || ''}</span>
-          </div>
-          {item.address ? <p class="text-gray-500 text-sm mb-1">📍 {item.address}</p> : null}
-          {item.phone ? <p class="text-gray-500 text-sm mb-1">📞 {item.phone}</p> : null}
-          {item.horario ? <p class="text-gray-500 text-sm mb-1">🕐 {item.horario}</p> : null}
-          {item.neighborhood ? <p class="text-gray-400 text-xs mt-2">{item.neighborhood}</p> : null}
-        </div>
-      ))}
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" set:html={`<div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow"><div class="flex items-start justify-between mb-2"><h2 class="font-bold text-gray-900">Hospital de Puerto Varas</h2><span class="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-700">hospital</span></div><p class="text-gray-500 text-sm mb-1">📍 Walker Martínez 500, Puerto Varas</p><p class="text-gray-500 text-sm mb-1">📞 +56 65 223 4800</p><p class="text-gray-500 text-sm mb-1">🕐 24 horas, todos los días</p></div>
+      <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow"><div class="flex items-start justify-between mb-2"><h2 class="font-bold text-gray-900">Clínica Puerto Varas</h2><span class="text-xs px-2 py-0.5 rounded-full bg-pink-100 text-pink-700">clinica</span></div><p class="text-gray-500 text-sm mb-1">📍 San Francisco 678, Puerto Varas</p><p class="text-gray-500 text-sm mb-1">📞 +56 65 223 9000</p><p class="text-gray-500 text-sm mb-1">🕐 Urgencias 24h, consultas de lunes a viernes 8:00-20:00, sábados 8:00-14:00</p></div>
+      <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow"><div class="flex items-start justify-between mb-2"><h2 class="font-bold text-gray-900">CESFAM Puerto Varas</h2><span class="text-xs px-2 py-0.5 rounded-full bg-teal-100 text-teal-700">cesfam</span></div><p class="text-gray-500 text-sm mb-1">📍 Jorge Alessandri 1234, Puerto Varas</p><p class="text-gray-500 text-sm mb-1">📞 +56 65 223 4500</p><p class="text-gray-500 text-sm mb-1">🕐 Lunes a viernes 8:00-17:00</p></div>
+      <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow"><div class="flex items-start justify-between mb-2"><h2 class="font-bold text-gray-900">CESFAM Ensenada</h2><span class="text-xs px-2 py-0.5 rounded-full bg-teal-100 text-teal-700">cesfam</span></div><p class="text-gray-500 text-sm mb-1">📍 Camino Ensenada Km 1, Ensenada</p><p class="text-gray-500 text-sm mb-1">📞 +56 65 248 1100</p><p class="text-gray-500 text-sm mb-1">🕐 Lunes a viernes 8:00-16:00</p></div>
+      <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow"><div class="flex items-start justify-between mb-2"><h2 class="font-bold text-gray-900">Centro de Urgencia Menor Puerto Varas</h2><span class="text-xs px-2 py-0.5 rounded-full bg-pink-100 text-pink-700">clinica</span></div><p class="text-gray-500 text-sm mb-1">📍 O'Higgins 890, Puerto Varas</p><p class="text-gray-500 text-sm mb-1">📞 +56 65 223 7700</p><p class="text-gray-500 text-sm mb-1">🕐 Lunes a domingo 7:00-23:00</p></div>`}></div>
   </section>
 </BaseLayout>

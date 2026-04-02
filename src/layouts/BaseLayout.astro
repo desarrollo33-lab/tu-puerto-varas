@@ -18,13 +18,13 @@ const currentUrl = canonical || new URL(Astro.url.pathname, siteConfig.url).href
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <title>${title}</title>
-  <meta name="description" content=${description} />
-  <link rel="canonical" href=${currentUrl} />
-  <meta property="og:title" content=${title} />
-  <meta property="og:description" content=${description} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={currentUrl} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content=${currentUrl} />
+  <meta property="og:url" content={currentUrl} />
   <meta property="og:locale" content="es_CL" />
   <meta property="og:site_name" content="tupuertovaras" />
   <meta name="twitter:card" content="summary_large_image" />

@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { catListing } from '../../data/content';
-const items = catListing['bares'] || [];
 ---
 <BaseLayout title="Bares & Noche en puerto varas | Los mejores" description="Descubre los mejores bares & noche en puerto varas. Reseñas, precios y tips locales. Guía actualizada 2026.">
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
@@ -12,33 +10,21 @@ const items = catListing['bares'] || [];
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="flex flex-wrap gap-2 mb-8">
-      {(items || []).map((item) => (
-        <a href="/bares/{item.slug}" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">
-          {item.name}
-        </a>
-      ))}
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {(items || []).map((item) => (
-        <a href="/bares/{item.slug}" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300">
-          <div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center">
-            <span class="text-4xl">🍻</span>
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between mb-2">
-              <h2 class="font-bold text-gray-900">{item.name}</h2>
-              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{item.priceRange || ''}</span>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-3">{item.shortDescription || ''}</p>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="text-amber-500">{'★'.repeat(Math.round(item.rating || 4))}</span>
-              <span class="text-gray-400 text-xs">({item.reviewCount || 0})</span>
-            </div>
-            {item.neighborhood && <p class="text-xs text-gray-400 mt-2">📍 {item.neighborhood}</p>}
-          </div>
-        </a>
-      ))}
-    </div>
+    <div class="flex flex-wrap gap-2 mb-8" set:html={`<a href="/bares/la-bodeguita-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">La Bodeguita</a>
+      <a href="/bares/cerveceria-kuntsmann-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Cervecería Kunstmann</a>
+      <a href="/bares/moai-bar-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Moai Bar</a>
+      <a href="/bares/el-rincon-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">El Rincón</a>
+      <a href="/bares/pub-1900-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Pub 1900</a>
+      <a href="/bares/salsoteca-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Salsoteca</a>
+      <a href="/bares/sky-bar-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Sky Bar</a>
+      <a href="/bares/bar-loco-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Bar Loco</a>`}></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" set:html={`<a href="/bares/la-bodeguita-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">La Bodeguita</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar de barrio con pisco sour de la casa y música en vivo.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(456)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/bares/cerveceria-kuntsmann-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Cervecería Kunstmann</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Cerveza artesanal de la región con comida alemana.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(1234)</span></div><p class="text-xs text-gray-400 mt-2">📍 alam</p></div></a>
+        <a href="/bares/moai-bar-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Moai Bar</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar con cócteles polynesis y ambiente tropical.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(567)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/bares/el-rincon-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">El Rincón</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar de copas íntimo con jazz los viernes.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(234)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/bares/pub-1900-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Pub 1900</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Pub irlandés con más de 30 whiskeys y cerveza de barril.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(678)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/bares/salsoteca-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Salsoteca</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar latino con clases de salsa y bachata los martes.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(345)</span></div><p class="text-xs text-gray-400 mt-2">📍 puerto</p></div></a>
+        <a href="/bares/sky-bar-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Sky Bar</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar en rooftop con vista 360° a la ciudad y volcanes.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(456)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/bares/bar-loco-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🍻</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Bar Loco</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Bar joven con tragos económicos y ambiente desenfadado.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(789)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>`}></div>
   </section>
 </BaseLayout>

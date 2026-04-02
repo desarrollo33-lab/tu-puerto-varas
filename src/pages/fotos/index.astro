@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { catListing } from '../../data/content';
-const items = catListing['fotos'] || [];
 ---
 <BaseLayout title="Foto Spots en puerto varas | Los mejores" description="Descubre los mejores foto spots en puerto varas. Reseñas, precios y tips locales. Guía actualizada 2026.">
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
@@ -12,33 +10,17 @@ const items = catListing['fotos'] || [];
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="flex flex-wrap gap-2 mb-8">
-      {(items || []).map((item) => (
-        <a href="/fotos/{item.slug}" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">
-          {item.name}
-        </a>
-      ))}
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {(items || []).map((item) => (
-        <a href="/fotos/{item.slug}" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300">
-          <div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center">
-            <span class="text-4xl">📸</span>
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between mb-2">
-              <h2 class="font-bold text-gray-900">{item.name}</h2>
-              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{item.priceRange || ''}</span>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-3">{item.shortDescription || ''}</p>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="text-amber-500">{'★'.repeat(Math.round(item.rating || 4))}</span>
-              <span class="text-gray-400 text-xs">({item.reviewCount || 0})</span>
-            </div>
-            {item.neighborhood && <p class="text-xs text-gray-400 mt-2">📍 {item.neighborhood}</p>}
-          </div>
-        </a>
-      ))}
-    </div>
+    <div class="flex flex-wrap gap-2 mb-8" set:html={`<a href="/fotos/muelle-costanera-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Muelle de la Costanera</a>
+      <a href="/fotos/iglesia-sagrado-corazon-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Iglesia del Sagrado Corazon</a>
+      <a href="/fotos/mirador-ensenada-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Mirador de Ensenada</a>
+      <a href="/fotos/barrio-aleman-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Barrio Aleman</a>
+      <a href="/fotos/lago-llanquihue-atardecer" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Lago Llanquihue al Atardecer</a>
+      <a href="/fotos/paseo-puerto-chico-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Paseo Puerto Chico</a>`}></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" set:html={`<a href="/fotos/muelle-costanera-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Muelle de la Costanera</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Emblematico muelle con vista directa al Volcan Osorno.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(3456)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/fotos/iglesia-sagrado-corazon-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Iglesia del Sagrado Corazon</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Iglesia neogotica tipica del patrimonio aleman de la ciudad.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(2345)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/fotos/mirador-ensenada-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Mirador de Ensenada</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Panoramica de 180 grados con Volcan Osorno, Lago Llanquihue y Volcan Calbuco.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(4567)</span></div><p class="text-xs text-gray-400 mt-2">📍 ensenada</p></div></a>
+        <a href="/fotos/barrio-aleman-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Barrio Aleman</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Calles coloridas con arquitectura tipica alemana del siglo XIX.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(1890)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/fotos/lago-llanquihue-atardecer" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Lago Llanquihue al Atardecer</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Reflejo perfecto del volcan en el lago durante el ocaso.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(2789)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/fotos/paseo-puerto-chico-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">📸</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Paseo Puerto Chico</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Gratis</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Sector waterfront con restaurantes, pubs y lanchas coloridas.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(1234)</span></div><p class="text-xs text-gray-400 mt-2">📍 puerto-chico</p></div></a>`}></div>
   </section>
 </BaseLayout>

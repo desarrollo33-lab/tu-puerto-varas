@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { catListing } from '../../data/content';
-const items = catListing['compras'] || [];
 ---
 <BaseLayout title="Compras & Artesanía en puerto varas | Los mejores" description="Descubre los mejores compras & artesanía en puerto varas. Reseñas, precios y tips locales. Guía actualizada 2026.">
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
@@ -12,33 +10,17 @@ const items = catListing['compras'] || [];
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="flex flex-wrap gap-2 mb-8">
-      {(items || []).map((item) => (
-        <a href="/compras/{item.slug}" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">
-          {item.name}
-        </a>
-      ))}
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {(items || []).map((item) => (
-        <a href="/compras/{item.slug}" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300">
-          <div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center">
-            <span class="text-4xl">🛍️</span>
-          </div>
-          <div class="p-5">
-            <div class="flex items-center justify-between mb-2">
-              <h2 class="font-bold text-gray-900">{item.name}</h2>
-              <span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">{item.priceRange || ''}</span>
-            </div>
-            <p class="text-gray-500 text-sm leading-relaxed mb-3">{item.shortDescription || ''}</p>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="text-amber-500">{'★'.repeat(Math.round(item.rating || 4))}</span>
-              <span class="text-gray-400 text-xs">({item.reviewCount || 0})</span>
-            </div>
-            {item.neighborhood && <p class="text-xs text-gray-400 mt-2">📍 {item.neighborhood}</p>}
-          </div>
-        </a>
-      ))}
-    </div>
+    <div class="flex flex-wrap gap-2 mb-8" set:html={`<a href="/compras/alam-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Alam Puerto Varas</a>
+      <a href="/compras/feria-artesanal-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Feria Artesanal Municipal</a>
+      <a href="/compras/centro-comercial-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Centro Comercial Puerto Varas</a>
+      <a href="/compras/tienda-mapuche-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Tienda Mapuche Newen</a>
+      <a href="/compras/mercado-municipal-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Mercado Municipal</a>
+      <a href="/compras/boutique-lana-puerto-varas" class="bg-gray-100 hover:bg-purple-100 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-full transition-colors no-underline">Boutique de Lana Austral</a>`}></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" set:html={`<a href="/compras/alam-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Alam Puerto Varas</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Centro comercial al aire libre con tiendas, restaurantes y entretenimiento.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(1234)</span></div><p class="text-xs text-gray-400 mt-2">📍 alam</p></div></a>
+        <a href="/compras/feria-artesanal-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Feria Artesanal Municipal</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Ferias de artesanos locales con productos typicos del sur.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(678)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/compras/centro-comercial-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Centro Comercial Puerto Varas</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Mall con marcas nacionales e internacionales y area de juegos.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(2345)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>
+        <a href="/compras/tienda-mapuche-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Tienda Mapuche Newen</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Artesanias mapuche autenticas: textitles, joyeria y esculturas.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(345)</span></div><p class="text-xs text-gray-400 mt-2">📍 centro</p></div></a>
+        <a href="/compras/mercado-municipal-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Mercado Municipal</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Mercado couvert con productos frescos, quesos y fiambres del sur.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="text-gray-400 text-xs">(567)</span></div><p class="text-xs text-gray-400 mt-2">📍 puerto</p></div></a>
+        <a href="/compras/boutique-lana-puerto-varas" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-40 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center"><span class="text-4xl">🛍️</span></div><div class="p-5"><div class="flex items-center justify-between mb-2"><h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Boutique de Lana Austral</h2><span class="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">$$$</span></div><p class="text-gray-500 text-sm leading-relaxed mb-3">Ropa y accesorios en lana de oveja y alpaca de producers locales.</p><div class="flex items-center gap-2 text-sm"><span class="text-amber-500">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="text-gray-400 text-xs">(234)</span></div><p class="text-xs text-gray-400 mt-2">📍 costanera</p></div></a>`}></div>
   </section>
 </BaseLayout>

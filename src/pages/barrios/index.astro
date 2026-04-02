@@ -1,9 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { catGuide } from '../../data/content';
-const items = catGuide['barrios'] || [];
 ---
-<BaseLayout title="Barrios puerto varas | Guías completas" description="Guías completas de barrios en puerto varas. Información actualizada con tips locales.">
+<BaseLayout title="Barrios puerto varas | Guias completas" description="Guias completas de barrios en puerto varas. Informacion actualizada con tips locales.">
   <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
       <span class="text-5xl mb-4 block">🏘️</span>
@@ -12,24 +10,10 @@ const items = catGuide['barrios'] || [];
     </div>
   </section>
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {(items || []).map((item) => (
-        <a href="/barrios/{item.slug}" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300">
-          <div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative">
-            <span class="text-5xl">🏘️</span>
-            {item.practicalInfo?.dificultad ? <span class="absolute top-3 right-3 bg-white/90 text-xs font-medium px-2 py-1 rounded-full">{item.practicalInfo.dificultad}</span> : null}
-          </div>
-          <div class="p-6">
-            <h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">{item.heroTitle || item.name}</h2>
-            <p class="text-gray-500 text-sm leading-relaxed mb-4">{(item.heroSubtitle || '').substring(0, 120)}</p>
-            <div class="flex flex-wrap gap-2">
-              {item.practicalInfo?.duracion_estimada ? <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">⏱️ {item.practicalInfo.duracion_estimada}</span> : null}
-              {item.practicalInfo?.distancia_desde_pv ? <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">📍 {item.practicalInfo.distancia_desde_pv}</span> : null}
-              {item.practicalInfo?.mejor_epoca ? <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">🗓️ {item.practicalInfo.mejor_epoca}</span> : null}
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" set:html={`<a href="/barrios/centro-puerto-varas-barrio" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative"><span class="text-5xl">🏘️</span></div><div class="p-6"><h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">El Corazón Histórico de la Ciudad</h2><p class="text-gray-500 text-sm leading-relaxed mb-4">Arquitectura alemana, comercio local y gastronomía en cada esquina</p><div class="flex flex-wrap gap-2"><span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">🎨 Patrimonial y comercial</span></div></div></a>
+      <a href="/barrios/costanera-puerto-varas-barrio" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative"><span class="text-5xl">🏘️</span></div><div class="p-6"><h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">El Paseo del Lago Llanquihue</h2><p class="text-gray-500 text-sm leading-relaxed mb-4">Kilómetros de costanera con vista al Volcán Osorno</p><div class="flex flex-wrap gap-2"><span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">🎨 Turístico y panorámico</span></div></div></a>
+      <a href="/barrios/puerto-chico-puerto-varas-barrio" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative"><span class="text-5xl">🏘️</span></div><div class="p-6"><h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">El Puerto Auténtico de Puerto Varas</h2><p class="text-gray-500 text-sm leading-relaxed mb-4">Lanchas coloridas, pubs waterfront y vida nocturna</p><div class="flex flex-wrap gap-2"><span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">🎨 Bohemio y authentic</span></div></div></a>
+      <a href="/barrios/lomas-del-lago-puerto-varas-barrio" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative"><span class="text-5xl">🏘️</span></div><div class="p-6"><h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">El Sector Residencial con Vistas</h2><p class="text-gray-500 text-sm leading-relaxed mb-4">Barrio tranquilo con servicios y vista privilegiada</p><div class="flex flex-wrap gap-2"><span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">🎨 Residencial tranquilo y exclusivo</span></div></div></a>
+      <a href="/barrios/pichi-pelluco-puerto-varas-barrio" class="group block bg-white border border-gray-100 rounded-2xl overflow-hidden no-underline hover:shadow-xl transition-all duration-300"><div class="h-48 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center relative"><span class="text-5xl">🏘️</span></div><div class="p-6"><h2 class="font-bold text-xl text-gray-900 group-hover:text-purple-600 transition-colors mb-2">El Sector Costero Tranquilo</h2><p class="text-gray-500 text-sm leading-relaxed mb-4">Playas, bosque nativo y faro histórico</p><div class="flex flex-wrap gap-2"><span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">🎨 Costeño y natural</span></div></div></a>`}></div>
   </section>
 </BaseLayout>
