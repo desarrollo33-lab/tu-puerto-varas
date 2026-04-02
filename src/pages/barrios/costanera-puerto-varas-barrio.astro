@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['barrios'] || [];
+const item = items.find((i) => i.slug === 'costanera-puerto-varas-barrio') || {"slug":"costanera-puerto-varas-barrio","name":"Costanera de Puerto Varas","zone":"Lacustre","neighborhoods":["Paseo Costanera","Muelle","Sector Hotels","Playa Puerto Varas"],"landmarks":["Muelle Turístico","Plaza de la Regeneración","Sushi Puerto Varas","Monumento al Colono"],"geo":{"lat":-41.3165,"lng":-72.9831},"vibe":"Turístico y panorámico","costo_arriendo":"$400.000 - $800.000 CLP/mes","idealPara":["turistas","romántico","atardeceres","fotos"],"heroTitle":"El Paseo del Lago Llanquihue","heroSubtitle":"Kilómetros de costanera con vista al Volcán Osorno","sections":[{"title":"El Mejor Paisaje de Chile","content":"La costanera de Puerto Varas es considerada uno de los paseos lacustres más bellos de Sudamérica. протянувшись varios kilómetros, offrece vistas privilegiadas del Volcán Osorno y el Volcán Calbuco. El muelle turístico es el punto icónico donde fotografiar el reflejo del volcan en el lago, especialmente al atardecer."},{"title":"Restaurants y Hospedaje Premium","content":"La zona concentra los restaurants con mejor vista de Puerto Varas. Desde fish & chips hasta alta gastronomía, todos con terraza hacia el lago. Los hoteles de la costanera como Cumbres de Puerto Varas y Casa de la abuela ofrecen experiencias premium con vista panorámica."},{"title":"Actividades Acuáticas","content":"Desde la costanera puedes contratar paseos en lancha, kayak y paddle. El club de Yates ofrece infraestructura para navegación a vela. En verano hay paseo de lanchas colectivas hacia Isla Tabón con almuerzo incluido."}],"highlights":["Vistas icónicas del Volcán Osorno","Muelle perfecto para fotos","Restaurants con terraza al lago","Paseos en lancha y kayak","Hoteles premium frente al lago"],"tips":["Camina al atardecer, las 19:30 en verano es mágico","Losmartes y jueves hay food trucks en la costanera","Reserva restaurant con terraza con anticipación"],"warnings":["El viento puede ser fuerte, lleva chaqueta"],"faqs":[{"pregunta":"¿Se puede hacer ejercicio en la costanera?","respuesta":"Sí, hay pista de running y bicisenda. Es muy popular para caminar y trotar."},{"pregunta":"¿Hay acceso beach?","respuesta":"No hay playa para nadar, pero hay escalinatas para contemplar el lago."}]};
+---
+<BaseLayout title="El Paseo del Lago Llanquihue | Barrios puerto varas" description="Kilómetros de costanera con vista al Volcán Osorno">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/barrios" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Barrios</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Paseo del Lago Llanquihue</h1>
+      <p class="text-white/80 text-lg">Kilómetros de costanera con vista al Volcán Osorno</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Mejor Paisaje de Chile</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La costanera de Puerto Varas es considerada uno de los paseos lacustres más bellos de Sudamérica. протянувшись varios kilómetros, offrece vistas privilegiadas del Volcán Osorno y el Volcán Calbuco. El muelle turístico es el punto icónico donde fotografiar el reflejo del volcan en el lago, especialmente al atardecer.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Restaurants y Hospedaje Premium</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La zona concentra los restaurants con mejor vista de Puerto Varas. Desde fish & chips hasta alta gastronomía, todos con terraza hacia el lago. Los hoteles de la costanera como Cumbres de Puerto Varas y Casa de la abuela ofrecen experiencias premium con vista panorámica.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Actividades Acuáticas</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Desde la costanera puedes contratar paseos en lancha, kayak y paddle. El club de Yates ofrece infraestructura para navegación a vela. En verano hay paseo de lanchas colectivas hacia Isla Tabón con almuerzo incluido.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          
+          
+          
+          
+          
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Vistas icónicas del Volcán Osorno</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Muelle perfecto para fotos</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Restaurants con terraza al lago</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Paseos en lancha y kayak</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Hoteles premium frente al lago</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Camina al atardecer, las 19:30 en verano es mágico</li>
+          <li class="text-gray-600 text-sm">💡 Losmartes y jueves hay food trucks en la costanera</li>
+          <li class="text-gray-600 text-sm">💡 Reserva restaurant con terraza con anticipación</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El viento puede ser fuerte, lleva chaqueta</li></ul></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🎭 Vibra</h4><p class="text-gray-600 text-sm">Turístico y panorámico</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Arriendo</h4><p class="text-gray-600 text-sm">$400.000 - $800.000 CLP/mes</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

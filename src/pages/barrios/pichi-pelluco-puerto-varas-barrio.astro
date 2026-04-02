@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['barrios'] || [];
+const item = items.find((i) => i.slug === 'pichi-pelluco-puerto-varas-barrio') || {"slug":"pichi-pelluco-puerto-varas-barrio","name":"Pichi Pelluco","zone":"Costero Periurbano","neighborhoods":["Sector Playa","Sector Monte","Pichi Pelluco Alto"],"landmarks":["Playa Pichi Pelluco","Bosque Encantado","Faro"],"geo":{"lat":-41.3256,"lng":-72.9925},"vibe":"Costeño y natural","costo_arriendo":"$250.000 - $400.000 CLP/mes","idealPara":["naturaleza","playa","surf","tranquilo"],"heroTitle":"El Sector Costero Tranquilo","heroSubtitle":"Playas, bosque nativo y faro histórico","sections":[{"title":"Playas del Sector Pacífico","content":"Pichi Pelluco ofrece las únicas playas accessibles de Puerto Varas mirando al océano Pacífico. La Playa Pichi Pelluco es popular en verano para locals y visitantes. El agua es más fría que en el lago pero el entorno más salvaje."},{"title":"Naturaleza Accessible","content":"El Bosque Encantado con sus esculturas de madera está在这儿 sector. También hay senderos hacia el Faro y el Parque Provincialcostero. Es el escape natural más cercano al centro urbano."},{"title":"Comunidad Costera","content":"A diferencia de sectores turísticos, Pichi Pelluco mantiene vida de comunidad costera. Hay pescaderías donde comprar directo del bote, cocinerías de barrio y un ritmo más relajado. Los precios de vivienda son más accesibles que en la costanera."}],"highlights":["Playa Pichi Pelluco costera","Bosque Encantado con esculturas","Faro histórico con vistas","Comunidad pesquera auténtica","Precios de vivienda accesibles"],"tips":["El Bosque Encantado es ideal con niños","Las playas son mejores en mañana","Compra pescado fresco en las pescaderías"],"warnings":["El agua del Pacífico es fría, no comparable al lago"],"faqs":[{"pregunta":"¿Hay cómo llegar en transporte público?","respuesta":"Buses urbanos llegan a Pichi Pelluco cada 30 minutos desde el centro."},{"pregunta":"¿Se puede acampar cerca?","respuesta":"Hay camping privados en el sector con infraestructura básica."}]};
+---
+<BaseLayout title="El Sector Costero Tranquilo | Barrios puerto varas" description="Playas, bosque nativo y faro histórico">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/barrios" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Barrios</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Sector Costero Tranquilo</h1>
+      <p class="text-white/80 text-lg">Playas, bosque nativo y faro histórico</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Playas del Sector Pacífico</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Pichi Pelluco ofrece las únicas playas accessibles de Puerto Varas mirando al océano Pacífico. La Playa Pichi Pelluco es popular en verano para locals y visitantes. El agua es más fría que en el lago pero el entorno más salvaje.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Naturaleza Accessible</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Bosque Encantado con sus esculturas de madera está在这儿 sector. También hay senderos hacia el Faro y el Parque Provincialcostero. Es el escape natural más cercano al centro urbano.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Comunidad Costera</h2><div class="text-gray-600 leading-relaxed prose max-w-none">A diferencia de sectores turísticos, Pichi Pelluco mantiene vida de comunidad costera. Hay pescaderías donde comprar directo del bote, cocinerías de barrio y un ritmo más relajado. Los precios de vivienda son más accesibles que en la costanera.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          
+          
+          
+          
+          
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playa Pichi Pelluco costera</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Bosque Encantado con esculturas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Faro histórico con vistas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Comunidad pesquera auténtica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Precios de vivienda accesibles</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 El Bosque Encantado es ideal con niños</li>
+          <li class="text-gray-600 text-sm">💡 Las playas son mejores en mañana</li>
+          <li class="text-gray-600 text-sm">💡 Compra pescado fresco en las pescaderías</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El agua del Pacífico es fría, no comparable al lago</li></ul></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🎭 Vibra</h4><p class="text-gray-600 text-sm">Costeño y natural</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Arriendo</h4><p class="text-gray-600 text-sm">$250.000 - $400.000 CLP/mes</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

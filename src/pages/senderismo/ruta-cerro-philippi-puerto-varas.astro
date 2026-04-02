@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['senderismo'] || [];
+const item = items.find((i) => i.slug === 'ruta-cerro-philippi-puerto-varas') || {"slug":"ruta-cerro-philippi-puerto-varas","name":"Cerro Philippi: Trekking de Altura","category_slug":"senderismo","heroTitle":"La Montaña Olvidada de Puerto Varas","heroSubtitle":"Ascenso técnico al Cerro Philippi con vistas privilegiadas","sections":[{"title":"Un Desafío Para Senderistas Experimentados","content":"El Cerro Philippi, con sus 2.524 metros de altura, es la segunda cumbre más alta visible desde Puerto Varas después del Volcán Osorno. A pesar de su imponencia, este cerro es menos transitado que su vecino, ofreciendo una experiencia más salvaje y solitaria. La ruta implica algo de scrambling (escalada simple sin equipamiento) y requiere buena orientación, ya que no está tão bem señalizada como otros senderos de la zona."},{"title":"Preparación Técnica","content":"Este trekking no es para principiantes. Se recomienda tener experiencia en senderismo de montaña, buena condición física y conocimiento básico de orientación. El desnivel supera los 1.400 metros y hay tramos donde hay que usar las manos para progresar. Es esencial llevar: botas de trekking con suela Vibram, bastones retráctiles,GPS o mapa topográfico, comida energética, al menos 3 litros de agua y equipo de seguridad básico. El clima en altura es impredecible, con niebla que puede bajar rápidamente."}],"practicalInfo":{"distancia_desde_pv":"55 km (1.5 horas)","dificultad":"Avanzada a técnica","duracion_estimada":"8-10 horas","mejor_epoca":"Enero a marzo","costo_entrada":"Gratis","como_llegar":"Ruta 225-CH, desvío no señalizado cerca de Petrohué"},"highlights":["Vistas únicas de la Cordillera de los Andes","Experiencia de trekking técnica sin multitudes","Flora de altura endémica","Cumbre poco visitada con sensación de exploración","Vista privilegiada del Volcán Osorno desde角度 diferente"],"tips":["Contrata guía local con experiencia en la ruta","Partida molto temprano, idealmente de madrugada","Lleva equipo de comunicación (radio o teléfono satelital)","Informa a alguien de tu plans antes de partir"],"warnings":["Ruta expuesta a rayо y tormentas eléctricas","Alto riesgo de hipotermia si no estás preparado"],"faqs":[{"pregunta":"¿Necesito guía para esta ruta?","respuesta":"Fuertemente recomendable. Sin experiencia local, es fácil perderse o subestimar los peligros."},{"pregunta":"¿Cuál es la diferencia con el Trekking al Osorno?","respuesta":"Philippi es menos técnico en algunos tramos pero más remoto y con menor infraestructura de emergencia."}],"metaTitle":"Trekking Cerro Philippi Puerto Varas | Guía Avanzada 2026","metaDescription":"Guía del trekking al Cerro Philippi. Ruta técnica, tips de seguridad y cómo llegar a esta cumbre olvidada cerca de Puerto Varas."};
+---
+<BaseLayout title="La Montaña Olvidada de Puerto Varas | Senderismo puerto varas" description="Ascenso técnico al Cerro Philippi con vistas privilegiadas">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/senderismo" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Senderismo</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">La Montaña Olvidada de Puerto Varas</h1>
+      <p class="text-white/80 text-lg">Ascenso técnico al Cerro Philippi con vistas privilegiadas</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Un Desafío Para Senderistas Experimentados</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Cerro Philippi, con sus 2.524 metros de altura, es la segunda cumbre más alta visible desde Puerto Varas después del Volcán Osorno. A pesar de su imponencia, este cerro es menos transitado que su vecino, ofreciendo una experiencia más salvaje y solitaria. La ruta implica algo de scrambling (escalada simple sin equipamiento) y requiere buena orientación, ya que no está tão bem señalizada como otros senderos de la zona.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Preparación Técnica</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Este trekking no es para principiantes. Se recomienda tener experiencia en senderismo de montaña, buena condición física y conocimiento básico de orientación. El desnivel supera los 1.400 metros y hay tramos donde hay que usar las manos para progresar. Es esencial llevar: botas de trekking con suela Vibram, bastones retráctiles,GPS o mapa topográfico, comida energética, al menos 3 litros de agua y equipo de seguridad básico. El clima en altura es impredecible, con niebla que puede bajar rápidamente.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 55 km (1.5 horas)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Avanzada a técnica</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 8-10 horas</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Enero a marzo</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Vistas únicas de la Cordillera de los Andes</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Experiencia de trekking técnica sin multitudes</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Flora de altura endémica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Cumbre poco visitada con sensación de exploración</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Vista privilegiada del Volcán Osorno desde角度 diferente</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Contrata guía local con experiencia en la ruta</li>
+          <li class="text-gray-600 text-sm">💡 Partida molto temprano, idealmente de madrugada</li>
+          <li class="text-gray-600 text-sm">💡 Lleva equipo de comunicación (radio o teléfono satelital)</li>
+          <li class="text-gray-600 text-sm">💡 Informa a alguien de tu plans antes de partir</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">Ruta expuesta a rayо y tormentas eléctricas</li>
+            <li class="text-amber-700 text-sm">Alto riesgo de hipotermia si no estás preparado</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

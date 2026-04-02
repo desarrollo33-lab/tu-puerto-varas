@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['senderismo'] || [];
+const item = items.find((i) => i.slug === 'trekking-islabo-puerto-varas') || {"slug":"trekking-islabo-puerto-varas","name":"Isla Tabón: Trekking Insular","category_slug":"senderismo","heroTitle":"Explora la Isla Misteriosa del Lago","heroSubtitle":"Aventura en kayak y caminata por una isla desierta del Lago Llanquihue","sections":[{"title":"La Isla Perdida del Lago","content":"La Isla Tabón es la أكبر isla del Lago Llanquihue y un destino de trekking único. Con aproximadamente 15 km² de superficie, la isla es en su mayoría selva valdiviana prístina, con playas solitarias y elevación que alcanza los 300 metros. Históricamente habitada por comunidades mapuche-williche, hoy la isla permanece mayormente despoblada, ofreciendo una experiencia de exploración auténtica."},{"title":"Cómo Llegar y Logística","content":"El acceso a la isla se hace desde Puerto Varas en lancha colectiva o charters privados hasta el puerto de la isla. Una vez ahí, puedes recorrer senderos no oficializados que atraviesan la selva, o contratar un guía local que conoce los mejores puntos de la isla. Los tours combinados incluyen kayak hasta la isla, caminata guiada de 3-4 horas y almuerzo tipo picnic en una playa apartada. Es una experiencia que conecta profundamente con la naturaleza y la historia de la zona."}],"practicalInfo":{"distancia_desde_pv":"30 minutos en lancha","dificultad":"Moderada","duracion_estimada":"Día completo con tour","mejor_epoca":"Noviembre a abril","costo_entrada":"$25.000 CLP tour con transporte","como_llegar":"Muelle de Puerto Varas, tours organizados"},"highlights":["Isla prácticamente virgen en el Lago Llanquihue","Playas solitarias solo accesibles en lancha","Selva valdiviana prístina","Historia mapuche-williche","Combinación kayak y trekking"],"tips":["Reserva con anticipación, los cupos son limitados","LlevaBlock de dormir y hydrate adequately","Respeta la normativa de protección de la isla"],"warnings":["El clima del lago puede cambiar rápidamente","No hay servicios en la isla, todo debe ser autocontenido"],"faqs":[{"pregunta":"¿Se puede acampar en la isla?","respuesta":"Sí, con permiso de la Capitanía de Puerto y respetando las áreas protegidas."}],"metaTitle":"Trekking Isla Tabón Lago Llanquihue | Guía 2026","metaDescription":"Guía del trekking en Isla Tabón. Cómo llegar en lancha, senderos, historia mapuche y tours desde Puerto Varas."};
+---
+<BaseLayout title="Explora la Isla Misteriosa del Lago | Senderismo puerto varas" description="Aventura en kayak y caminata por una isla desierta del Lago Llanquihue">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/senderismo" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Senderismo</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Explora la Isla Misteriosa del Lago</h1>
+      <p class="text-white/80 text-lg">Aventura en kayak y caminata por una isla desierta del Lago Llanquihue</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">La Isla Perdida del Lago</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La Isla Tabón es la أكبر isla del Lago Llanquihue y un destino de trekking único. Con aproximadamente 15 km² de superficie, la isla es en su mayoría selva valdiviana prístina, con playas solitarias y elevación que alcanza los 300 metros. Históricamente habitada por comunidades mapuche-williche, hoy la isla permanece mayormente despoblada, ofreciendo una experiencia de exploración auténtica.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Cómo Llegar y Logística</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El acceso a la isla se hace desde Puerto Varas en lancha colectiva o charters privados hasta el puerto de la isla. Una vez ahí, puedes recorrer senderos no oficializados que atraviesan la selva, o contratar un guía local que conoce los mejores puntos de la isla. Los tours combinados incluyen kayak hasta la isla, caminata guiada de 3-4 horas y almuerzo tipo picnic en una playa apartada. Es una experiencia que conecta profundamente con la naturaleza y la historia de la zona.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 30 minutos en lancha</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Moderada</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> Día completo con tour</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Noviembre a abril</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> $25.000 CLP tour con transporte</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Isla prácticamente virgen en el Lago Llanquihue</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playas solitarias solo accesibles en lancha</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Selva valdiviana prístina</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Historia mapuche-williche</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Combinación kayak y trekking</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Reserva con anticipación, los cupos son limitados</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock de dormir y hydrate adequately</li>
+          <li class="text-gray-600 text-sm">💡 Respeta la normativa de protección de la isla</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El clima del lago puede cambiar rápidamente</li>
+            <li class="text-amber-700 text-sm">No hay servicios en la isla, todo debe ser autocontenido</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['parques'] || [];
+const item = items.find((i) => i.slug === 'reserva-nacional-lobos-marinos-puerto-varas') || {"slug":"reserva-nacional-lobos-marinos-puerto-varas","name":"Reserva Biológica Lobos Marinos","category_slug":"parques","heroTitle":"Encuentro con los Gigantes del Mar","heroSubtitle":"Colonias de lobos marinos y aves marinas en la costa de Puerto Varas","sections":[{"title":"El Hogar de los Lobos Marinos","content":"La Reserva Biológica Lobos Marinos, también conocida como Monumento Natural Islotes de Puñihuil, es una de las pocas colonias de lobos marinos que comparten habitat con pingüinos de Humboldt en el mundo. Ubicada a aproximadamente 2 horas al norte de Puerto Varas, en la costa del Pacífico, esta reserva es un hotspot de biodiversidad marina que merece ser incluido en cualquier itinerario de viaje a la zona de Los Lagos."},{"title":"Avistamiento de Fauna Marina","content":"Los tours en bote permiten acercarse a las colonias de lobos comunes y finos, observando su comportamiento social y restingas. Durante la temporada de reproducción (noviembre a marzo), es posible ver pups de lobos junto a sus madres. La reserva también play un papel crucial en la conservación del pingüino de Humboldt, una especie en peligro de extinción, ya que sus islotes son uno de sus derniers refugios de anidación."},{"title":"Importancia Conservacionista","content":"La reserva fue establecida para proteger tanto la fauna marina como los ecosistemas insulares únicos. Los Islotes de Puñihuil son el único lugar del mundo donde coexisten pingüinos de Humboldt y Magallanes en colonies mixtas. La investigación científica مستمرة ha permitido entender mejor las dinámicas de estas poblaciones y desarrollar estrategias de conservación efectivas."}],"practicalInfo":{"distancia_desde_pv":"120 km (2 horas en auto)","dificultad":"Fácil (tours en bote)","duracion_estimada":"4-5 horas ida y vuelta","mejor_epoca":"Noviembre a marzo","costo_entrada":"$12.000 CLP tour en bote","como_llegar":"Ruta 5 Norte hastaPqate, luego camino costero a Puñihuil"},"highlights":["Colonias de lobos marinos en su habitat natural","Pingüinos de Humboldt y Magallanes","Tours en bote certificados","Playas vírgenes de la costa pacífica","Delfines comunes en el trayecto","Centro de interpretación con exhibitios interactivos","Avistamiento de ballenas según temporada"],"tips":["Reserva el tour con anticipación en temporada alta","LlevaBlock solar y ropa de cama","No uses flash en las fotografías de fauna","Respeta la distancia mínima de los animales"],"warnings":["El mar puede estar agitado, toma médicaments contra el mareo si eres sensible","Está prohibido desembarcar en los islotes sin autorización"],"faqs":[{"pregunta":"¿Se puede visitar sin tour guiado?","respuesta":"No, el acceso a los islotes está restringido a tours autorizados para proteger la fauna."},{"pregunta":"¿Cuál es la mejor época para ver pingüinos?","respuesta":"Los pingüinos se pueden ver todo el año, pero la mejor época es entre septiembre y abril cuando están más activos."},{"pregunta":"¿Hay servicios cerca de la reserva?","respuesta":"El pueblo de Puñihuil tiene restaurantes básicos y agencias de tours. Se recomienda llevar provisiones desde Puerto Varas."}],"metaTitle":"Reserva Biológica Lobos Marinos Puñihuil | Guía 2026","metaDescription":"Guía de la Reserva Biológica Lobos Marinos. Avistamiento de lobos, pingüinos y ballenas en los Islotes de Puñihuil desde Puerto Varas."};
+---
+<BaseLayout title="Encuentro con los Gigantes del Mar | Parques Nacionales puerto varas" description="Colonias de lobos marinos y aves marinas en la costa de Puerto Varas">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/parques" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Parques Nacionales</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Encuentro con los Gigantes del Mar</h1>
+      <p class="text-white/80 text-lg">Colonias de lobos marinos y aves marinas en la costa de Puerto Varas</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Hogar de los Lobos Marinos</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La Reserva Biológica Lobos Marinos, también conocida como Monumento Natural Islotes de Puñihuil, es una de las pocas colonias de lobos marinos que comparten habitat con pingüinos de Humboldt en el mundo. Ubicada a aproximadamente 2 horas al norte de Puerto Varas, en la costa del Pacífico, esta reserva es un hotspot de biodiversidad marina que merece ser incluido en cualquier itinerario de viaje a la zona de Los Lagos.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Avistamiento de Fauna Marina</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Los tours en bote permiten acercarse a las colonias de lobos comunes y finos, observando su comportamiento social y restingas. Durante la temporada de reproducción (noviembre a marzo), es posible ver pups de lobos junto a sus madres. La reserva también play un papel crucial en la conservación del pingüino de Humboldt, una especie en peligro de extinción, ya que sus islotes son uno de sus derniers refugios de anidación.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Importancia Conservacionista</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La reserva fue establecida para proteger tanto la fauna marina como los ecosistemas insulares únicos. Los Islotes de Puñihuil son el único lugar del mundo donde coexisten pingüinos de Humboldt y Magallanes en colonies mixtas. La investigación científica مستمرة ha permitido entender mejor las dinámicas de estas poblaciones y desarrollar estrategias de conservación efectivas.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 120 km (2 horas en auto)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil (tours en bote)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 4-5 horas ida y vuelta</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Noviembre a marzo</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> $12.000 CLP tour en bote</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Colonias de lobos marinos en su habitat natural</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Pingüinos de Humboldt y Magallanes</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Tours en bote certificados</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playas vírgenes de la costa pacífica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Delfines comunes en el trayecto</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Centro de interpretación con exhibitios interactivos</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Avistamiento de ballenas según temporada</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Reserva el tour con anticipación en temporada alta</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock solar y ropa de cama</li>
+          <li class="text-gray-600 text-sm">💡 No uses flash en las fotografías de fauna</li>
+          <li class="text-gray-600 text-sm">💡 Respeta la distancia mínima de los animales</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El mar puede estar agitado, toma médicaments contra el mareo si eres sensible</li>
+            <li class="text-amber-700 text-sm">Está prohibido desembarcar en los islotes sin autorización</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

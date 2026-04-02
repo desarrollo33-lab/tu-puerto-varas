@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['parques'] || [];
+const item = items.find((i) => i.slug === 'parque-nacional-alkofal-puerto-varas') || {"slug":"parque-nacional-alkofal-puerto-varas","name":"Parque Provincial de Алкофал","category_slug":"parques","heroTitle":"El Último Pulmón Verde de Puerto Varas","heroSubtitle":"Bosque costero y senderos junto al mar en el sur de Chile","sections":[{"title":"Un Oasis a las Afueras de la Ciudad","content":"El Parque Provincial Алкофал, cuyo nombre en mapudungun significa lugar de cholcos o lugar de aves, es un Área Silvestre Protegida que se extiende por más de 7.000 hectáreas de bosque valdiviano costero. Ubicado a solo 15 minutos del centro de Puerto Varas, este parque es el escape perfecto para quienes buscan naturaleza sin alejarse demasiado de la ciudad. El parque protege cuencas hidrográficas, turberas y ecosistemas de importancia regional."},{"title":"Senderos y Caminatas","content":"El parque cuenta con una red de senderos señalizados que van desde caminatas familiares de 30 minutos hasta trekking de día completo. El Sendero Los Notros es el más popular, una caminata de 3 horas que atraviesa bosque de coigües centenarios y termina en una cascada escondida. También existe el Sendero de la Reserva, que pasa por turberas y lagunas donde es común ver cisnes de cuello negro y taguas."},{"title":"Biodiversidad Costera","content":"A diferencia de los parques del interior, Алкофал combina bosque con ecosistemas costeros. Las playas rocosas del sector La Arena son perfectas para avistar lobos marinos y, en temporada, ballenas grises que pasan frente a la costa durante su migración. Los bosques son hogar de carpinteros, hued hued y el esquivo güiña, el felino más pequeño de América."}],"practicalInfo":{"distancia_desde_pv":"8 km (15 minutos)","dificultad":"Fácil a moderada","duracion_estimada":"3 a 6 horas","mejor_epoca":"Todo el año","costo_entrada":"Gratis","como_llegar":"Ruta costera sur desde Puerto Varas hacia Pichi Pelluco"},"highlights":["Bosque valdiviano costero preservado","Cascada Los Notros","Avistamiento de ballenas grises (mayo-octubre)","Turberas con flora única","Senderos familiares accesibles","Playa La Arena para picnic","Observación de aves con guía local"],"tips":["La entrada es gratuita, pero dona al área protegida","Lleva repelente de mosquitos, especialmente en verano","El sector costero es ideal para picnic con vista al mar","Contrata un guía local para avistamiento de fauna"],"warnings":["No hay servicios dentro del parque, lleva agua y snacks","Los senderos pueden estar embarrados después de la lluvia"],"faqs":[{"pregunta":"¿Hay tours organizados al parque?","respuesta":"Sí, varias agencias locales ofrecen tours de senderismo y avistamiento de aves con guías certificados."},{"pregunta":"¿Se puede ir en transporte público?","respuesta":"No hay bus directo, pero puedes tomar un taxi desde Puerto Varas por aproximadamente $10.000 CLP."},{"pregunta":"¿Es seguro para niños?","respuesta":"Sí, los senderos cortos son aptos para familias. Solo evita alejarte de los senderos marcados."}],"metaTitle":"Parque Алкофал Puerto Varas | Guía de Senderos y Biodiversidad","metaDescription":"Guía del Parque Provincial Алкофal. Senderos, avistamiento de ballenas, cómo llegar y tips para visitar este oasis natural cerca de Puerto Varas."};
+---
+<BaseLayout title="El Último Pulmón Verde de Puerto Varas | Parques Nacionales puerto varas" description="Bosque costero y senderos junto al mar en el sur de Chile">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/parques" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Parques Nacionales</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Último Pulmón Verde de Puerto Varas</h1>
+      <p class="text-white/80 text-lg">Bosque costero y senderos junto al mar en el sur de Chile</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Un Oasis a las Afueras de la Ciudad</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Parque Provincial Алкофал, cuyo nombre en mapudungun significa lugar de cholcos o lugar de aves, es un Área Silvestre Protegida que se extiende por más de 7.000 hectáreas de bosque valdiviano costero. Ubicado a solo 15 minutos del centro de Puerto Varas, este parque es el escape perfecto para quienes buscan naturaleza sin alejarse demasiado de la ciudad. El parque protege cuencas hidrográficas, turberas y ecosistemas de importancia regional.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Senderos y Caminatas</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El parque cuenta con una red de senderos señalizados que van desde caminatas familiares de 30 minutos hasta trekking de día completo. El Sendero Los Notros es el más popular, una caminata de 3 horas que atraviesa bosque de coigües centenarios y termina en una cascada escondida. También existe el Sendero de la Reserva, que pasa por turberas y lagunas donde es común ver cisnes de cuello negro y taguas.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Biodiversidad Costera</h2><div class="text-gray-600 leading-relaxed prose max-w-none">A diferencia de los parques del interior, Алкофал combina bosque con ecosistemas costeros. Las playas rocosas del sector La Arena son perfectas para avistar lobos marinos y, en temporada, ballenas grises que pasan frente a la costa durante su migración. Los bosques son hogar de carpinteros, hued hued y el esquivo güiña, el felino más pequeño de América.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 8 km (15 minutos)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil a moderada</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 3 a 6 horas</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Bosque valdiviano costero preservado</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Cascada Los Notros</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Avistamiento de ballenas grises (mayo-octubre)</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Turberas con flora única</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Senderos familiares accesibles</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playa La Arena para picnic</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Observación de aves con guía local</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 La entrada es gratuita, pero dona al área protegida</li>
+          <li class="text-gray-600 text-sm">💡 Lleva repelente de mosquitos, especialmente en verano</li>
+          <li class="text-gray-600 text-sm">💡 El sector costero es ideal para picnic con vista al mar</li>
+          <li class="text-gray-600 text-sm">💡 Contrata un guía local para avistamiento de fauna</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">No hay servicios dentro del parque, lleva agua y snacks</li>
+            <li class="text-amber-700 text-sm">Los senderos pueden estar embarrados después de la lluvia</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

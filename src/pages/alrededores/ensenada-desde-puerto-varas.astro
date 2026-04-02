@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['alrededores'] || [];
+const item = items.find((i) => i.slug === 'ensenada-desde-puerto-varas') || {"slug":"ensenada-desde-puerto-varas","name":"Ensenada","heroTitle":"Donde Empieza la Patagonia","heroSubtitle":"Sector inicio de aventuras hacia el Volcán Osorno y Petrohué","sections":[{"title":"Portal de Entrada al Parque Nacional","content":"Ensenada es una pequeña comunidad ubicada a 45 km de Puerto Varas en la ruta hacia Petrohué y el Parque Nacional Vicente Pérez Rosales. Es el último punto con servicios antes de entrar al parque nacional. Su estratégica ubicación la convierte en base perfecta para explorar los principales atractivos de la zona."},{"title":"Historia y Cultura","content":"Este sector fue históricamente un punto de descanso para arrieros y via[email protected] que cruzaban la cordillera. Hoy conserva un pequeño museo con artifacts de la época colonial y una iglesia de madera que data de 1910. Las familias locales mantienen tradiciones de artesanías en lana y madera."},{"title":"Gastronomía Rural","content":"Los restaurants de Ensenada ofrecen cocina sureña auténtica: cordero al palo, truchas asalmonadas y cazuelas de ave. Muchos son casas de familia adaptadas que mantienen recetas de abuelas. Los precios son más accesibles que en Puerto Varas y las porciones generosas."}],"practicalInfo":{"distancia_desde_pv":"45 km (1 hora)","dificultad":"Fácil","duracion_estimada":"2-3 horas o base para tours","mejor_epoca":"Todo el año","costo_entrada":"Gratis"},"highlights":["Último punto de servicios antes del parque","Restaurantes rurales auténticos","Iglesia de madera histórica","Base para tours al Volcán Osorno","Paisajes de transición patagónica"],"tips":["Almuerza aquí antes de entrar al parque","Contrata tours locales para el Volcán Osorno","El mirador en el camino es foto obligada"],"warnings":["No hay bencina en Ensenada, carga antes desde Puerto Varas"],"faqs":[{"pregunta":"¿Se puede dormir en Ensenada?","respuesta":"Sí, hay hostales y lodges básicos. Más opciones en Puerto Varas."},{"pregunta":"¿Es buena base para tours?","respuesta":"Sí, muchas agencias ofrecen tours con pick-up en Ensenada para evitar el ingreso al parque."}]};
+---
+<BaseLayout title="Donde Empieza la Patagonia | Alrededores puerto varas" description="Sector inicio de aventuras hacia el Volcán Osorno y Petrohué">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/alrededores" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Alrededores</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Donde Empieza la Patagonia</h1>
+      <p class="text-white/80 text-lg">Sector inicio de aventuras hacia el Volcán Osorno y Petrohué</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Portal de Entrada al Parque Nacional</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Ensenada es una pequeña comunidad ubicada a 45 km de Puerto Varas en la ruta hacia Petrohué y el Parque Nacional Vicente Pérez Rosales. Es el último punto con servicios antes de entrar al parque nacional. Su estratégica ubicación la convierte en base perfecta para explorar los principales atractivos de la zona.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Historia y Cultura</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Este sector fue históricamente un punto de descanso para arrieros y via[email protected] que cruzaban la cordillera. Hoy conserva un pequeño museo con artifacts de la época colonial y una iglesia de madera que data de 1910. Las familias locales mantienen tradiciones de artesanías en lana y madera.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Gastronomía Rural</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Los restaurants de Ensenada ofrecen cocina sureña auténtica: cordero al palo, truchas asalmonadas y cazuelas de ave. Muchos son casas de familia adaptadas que mantienen recetas de abuelas. Los precios son más accesibles que en Puerto Varas y las porciones generosas.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 45 km (1 hora)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 2-3 horas o base para tours</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Último punto de servicios antes del parque</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Restaurantes rurales auténticos</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Iglesia de madera histórica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Base para tours al Volcán Osorno</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Paisajes de transición patagónica</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Almuerza aquí antes de entrar al parque</li>
+          <li class="text-gray-600 text-sm">💡 Contrata tours locales para el Volcán Osorno</li>
+          <li class="text-gray-600 text-sm">💡 El mirador en el camino es foto obligada</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">No hay bencina en Ensenada, carga antes desde Puerto Varas</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

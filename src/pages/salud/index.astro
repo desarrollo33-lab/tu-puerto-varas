@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catDirectory } from '../../data/content';
+const items = catDirectory['salud'] || [];
+---
+<BaseLayout title="Salud puerto varas | Directorio completo" description="Directorio completo de salud en puerto varas. Direcciones, teléfonos y horarios.">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <span class="text-5xl mb-4 block">🏥</span>
+      <h1 class="text-4xl lg:text-5xl font-black text-white mb-4">Salud</h1>
+      <p class="text-white/80 text-lg">Direcciones, teléfonos y horarios.</p>
+    </div>
+  </section>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {(items || []).map((item) => (
+        <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md transition-shadow">
+          <div class="flex items-start justify-between mb-2">
+            <h2 class="font-bold text-gray-900">{item.name}</h2>
+            <span class="text-xs px-2 py-0.5 rounded-full {(typeColors as any)[item.type] || 'bg-gray-100 text-gray-600'}">{item.type || ''}</span>
+          </div>
+          {item.address ? <p class="text-gray-500 text-sm mb-1">📍 {item.address}</p> : null}
+          {item.phone ? <p class="text-gray-500 text-sm mb-1">📞 {item.phone}</p> : null}
+          {item.horario ? <p class="text-gray-500 text-sm mb-1">🕐 {item.horario}</p> : null}
+          {item.neighborhood ? <p class="text-gray-400 text-xs mt-2">{item.neighborhood}</p> : null}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

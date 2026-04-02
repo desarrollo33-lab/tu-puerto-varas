@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['barrios'] || [];
+const item = items.find((i) => i.slug === 'centro-puerto-varas-barrio') || {"slug":"centro-puerto-varas-barrio","name":"Centro de Puerto Varas","zone":"Urbano","neighborhoods":["Plaza de Armas","Barrio Alemán","Calle Santa Rosa","Peatonal Manuel Rodríguez"],"landmarks":["Iglesia del Sagrado Corazón","Plaza de Armas","Museo de la Colonización","Mercado Municipal"],"geo":{"lat":-41.3191,"lng":-72.9858},"vibe":"Patrimonial y comercial","costo_arriendo":"$250.000 - $450.000 CLP/mes","idealPara":["turistas","historia","gastronomía","compras"],"heroTitle":"El Corazón Histórico de la Ciudad","heroSubtitle":"Arquitectura alemana, comercio local y gastronomía en cada esquina","sections":[{"title":"Patrimonio y Arquitectura","content":"El centro de Puerto Varas concentra el patrimonio arquitectónico más importante de la ciudad. La Iglesia del Sagrado Corazón, construída en 1872, es símbolo de la colonización alemana con su estilo neogótico. Las casas coloridas de la calle Santa Rosa han sido restauradas manteniendo sus ventanas de arco y techumbres típicas. La Plaza de Armas, con sus palmeras y monumentos, es punto de encuentro de locales y turistas."},{"title":"Comercio y Servicios","content":"El sector comercial ofrece de todo: desde supermarkets como Unimarc y Jumbo hasta tiendas locales de artesanías. La Peatonal Manuel Rodríguez tiene comercio variado con cafes, librerías y tiendas de montaña. El Mercado Municipal es el lugar para comprar productos frescos del sur: quesos, mermeladas, miel y lana."},{"title":"Gastronomía y Vida Nocturna","content":"El centro concentra restaurants para todos los gustos y presupuestos. Desde el clásico menú del día a $6.000 hasta cocina de autor premium. La vida nocturna incluye bares tranquilos para after office y pubs con música en vivo los fines de semana."}],"highlights":["Iglesia neogótica patrimonio nacional","Comercio variado accesible","Restaurantes para todos los presupuestos","Mercado Municipal con productos del sur","Ubicación central con buena conectividad"],"tips":["Aparca en Costanera y camina al centro","Losmartes hayferia libre en la plaza","Prueba el strudel en las pastelerías alemanas"],"warnings":["En temporada alta hay mucha gente, planifica visitas temprano"],"faqs":[{"pregunta":"¿Es walkable el centro?","respuesta":"Sí, todo está a 10-15 minutos caminando. Estacionamiento es limitado."},{"pregunta":"¿Dónde dormir en el centro?","respuesta":"Hay hostales,apartamentos turísticos y el Hotel Cabañas del Lago con vista al lago."}]};
+---
+<BaseLayout title="El Corazón Histórico de la Ciudad | Barrios puerto varas" description="Arquitectura alemana, comercio local y gastronomía en cada esquina">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/barrios" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Barrios</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Corazón Histórico de la Ciudad</h1>
+      <p class="text-white/80 text-lg">Arquitectura alemana, comercio local y gastronomía en cada esquina</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Patrimonio y Arquitectura</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El centro de Puerto Varas concentra el patrimonio arquitectónico más importante de la ciudad. La Iglesia del Sagrado Corazón, construída en 1872, es símbolo de la colonización alemana con su estilo neogótico. Las casas coloridas de la calle Santa Rosa han sido restauradas manteniendo sus ventanas de arco y techumbres típicas. La Plaza de Armas, con sus palmeras y monumentos, es punto de encuentro de locales y turistas.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Comercio y Servicios</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El sector comercial ofrece de todo: desde supermarkets como Unimarc y Jumbo hasta tiendas locales de artesanías. La Peatonal Manuel Rodríguez tiene comercio variado con cafes, librerías y tiendas de montaña. El Mercado Municipal es el lugar para comprar productos frescos del sur: quesos, mermeladas, miel y lana.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Gastronomía y Vida Nocturna</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El centro concentra restaurants para todos los gustos y presupuestos. Desde el clásico menú del día a $6.000 hasta cocina de autor premium. La vida nocturna incluye bares tranquilos para after office y pubs con música en vivo los fines de semana.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          
+          
+          
+          
+          
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Iglesia neogótica patrimonio nacional</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Comercio variado accesible</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Restaurantes para todos los presupuestos</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Mercado Municipal con productos del sur</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Ubicación central con buena conectividad</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Aparca en Costanera y camina al centro</li>
+          <li class="text-gray-600 text-sm">💡 Losmartes hayferia libre en la plaza</li>
+          <li class="text-gray-600 text-sm">💡 Prueba el strudel en las pastelerías alemanas</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">En temporada alta hay mucha gente, planifica visitas temprano</li></ul></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🎭 Vibra</h4><p class="text-gray-600 text-sm">Patrimonial y comercial</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Arriendo</h4><p class="text-gray-600 text-sm">$250.000 - $450.000 CLP/mes</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

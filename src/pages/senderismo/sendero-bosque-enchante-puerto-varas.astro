@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['senderismo'] || [];
+const item = items.find((i) => i.slug === 'sendero-bosque-enchante-puerto-varas') || {"slug":"sendero-bosque-enchante-puerto-varas","name":"El Bosque Encantado","category_slug":"senderismo","heroTitle":"Camina Entre Héroes de Cuento","heroSubtitle":"Sendero único con esculturas de madera en medio del bosque","sections":[{"title":"Arte y Naturaleza en Armonía","content":"El Sendero del Bosque Encantado es una experiencia única que combina naturaleza con arte. Ubicado a solo 20 minutos de Puerto Varas, este sendero de 3 kilómetros (ida) ha sido transformado en una galería al aire libre donde esculturas de madera de personajes de cuentos infantiles se integran orgánicamente con el bosque valdiviano. Es perfecto para familias con niños, ofreciendo una forma lúdica de conectar con la naturaleza."},{"title":"El Recorrido","content":"El sendero serpentea por un bosque de coigües y arrayanes, con elevation suave que lo hace accesible para personas de todas las edades. A lo largo del camino, sorpresas artísticas esperan en cada curva: gigantes de madera, criaturas míticas, bancos para descansar y hasta una casa del árbol. El silencio del bosque contrasta con la imaginación que despiertan las esculturas. El circuito completo toma aproximadamente 1.5 horas a paso pausado, ideal para una actividad de media jornada."}],"practicalInfo":{"distancia_desde_pv":"12 km (20 minutos)","dificultad":"Fácil","duracion_estimada":"1.5 horas","mejor_epoca":"Todo el año","costo_entrada":"$3.000 CLP","como_llegar":"Ruta costera hacia Pichi Pelluco, desvío señalizado"},"highlights":["Esculturas de madera únicas en el bosque","Perfecto para niños y familias","Sendero accesible con buena señalización","Área de picnic con fogón","Tienda de artesanías local"],"tips":["Ideal para combinar con almuerzo en Pichi Pelluco","LlevaBlock para picnic después de la caminata","Las esculturas se ven mejor con luz de la mañana"],"warnings":["El bosque puede estar húmedo, lleva calzado adecuado"],"faqs":[{"pregunta":"¿Hay tours guiados?","respuesta":"Sí, tours desde Puerto Varas incluyen transporte y guía especializado en el sendero."}],"metaTitle":"Bosque Encantado Puerto Varas | Sendero con Esculturas 2026","metaDescription":"Guía del Sendero del Bosque Encantado. Esculturas de madera, caminata familiar y cómo llegar desde Puerto Varas."};
+---
+<BaseLayout title="Camina Entre Héroes de Cuento | Senderismo puerto varas" description="Sendero único con esculturas de madera en medio del bosque">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/senderismo" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Senderismo</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Camina Entre Héroes de Cuento</h1>
+      <p class="text-white/80 text-lg">Sendero único con esculturas de madera en medio del bosque</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Arte y Naturaleza en Armonía</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Sendero del Bosque Encantado es una experiencia única que combina naturaleza con arte. Ubicado a solo 20 minutos de Puerto Varas, este sendero de 3 kilómetros (ida) ha sido transformado en una galería al aire libre donde esculturas de madera de personajes de cuentos infantiles se integran orgánicamente con el bosque valdiviano. Es perfecto para familias con niños, ofreciendo una forma lúdica de conectar con la naturaleza.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Recorrido</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El sendero serpentea por un bosque de coigües y arrayanes, con elevation suave que lo hace accesible para personas de todas las edades. A lo largo del camino, sorpresas artísticas esperan en cada curva: gigantes de madera, criaturas míticas, bancos para descansar y hasta una casa del árbol. El silencio del bosque contrasta con la imaginación que despiertan las esculturas. El circuito completo toma aproximadamente 1.5 horas a paso pausado, ideal para una actividad de media jornada.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 12 km (20 minutos)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 1.5 horas</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> $3.000 CLP</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Esculturas de madera únicas en el bosque</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Perfecto para niños y familias</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Sendero accesible con buena señalización</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Área de picnic con fogón</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Tienda de artesanías local</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Ideal para combinar con almuerzo en Pichi Pelluco</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock para picnic después de la caminata</li>
+          <li class="text-gray-600 text-sm">💡 Las esculturas se ven mejor con luz de la mañana</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El bosque puede estar húmedo, lleva calzado adecuado</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

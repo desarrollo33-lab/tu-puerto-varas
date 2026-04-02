@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['senderismo'] || [];
+const item = items.find((i) => i.slug === 'sendero-laguna-verde-puerto-varas') || {"slug":"sendero-laguna-verde-puerto-varas","name":"Sendero Laguna Verde","category_slug":"senderismo","heroTitle":"Paseo al Espejo Esmeralda","heroSubtitle":"Caminata fácil a una laguna glaciar de aguas verdes","sections":[{"title":"Un Tesoro Escondido en el Valle","content":"La Laguna Verde es una laguna de origen glaciar ubicada en un valle andino a aproximadamente 90 minutos de Puerto Varas. Sus aguas de color verde intenso, que cambian de tonalidad según la luz del sol, reflejan el Volcán Osorno y los cerros circundantes, creando uno de los paisajes más fotogénicos de la zona. A diferencia de otros destinos turísticos, Laguna Verde se mantiene relativamente discreta, ofreciendo una experiencia más tranquila y auténtica."},{"title":"La Caminata","content":"El sendero hasta Laguna Verde es una caminata de dificultad baja a moderada, apta para familias y principiantes en senderismo. Partiendo desde el punto de estacionamiento en el valle, el camino avanza por un sendero bien mantenido durante aproximadamente 4 kilómetros (ida) a través de praderas y bosque nativo. El desnivel es suave, alrededor de 200 metros, lo que hace la caminata accesible para casi cualquier persona con buena salud. A mitad de camino, hay un mirador natural desde donde se puede apreciar una primera vista de la laguna."},{"title":"El Destino: Aguas que Reflejan el Volcán","content":"Al llegar a la laguna, el paisaje abre en toda su magnificencia. La Laguna Verde tiene un color verde esmeralda único, resultado de la reflexión de la luz solar en las partículas de roca glaciar suspendidas en el agua. El Volcán Osorno se refleja perfectamente en sus aguas calmas, especialmente durante las primeras horas de la mañana. Es el lugar perfecto para un picnic, meditación o simplemente disfrutar de la naturaleza en silencio. La pesca de truchas es permitida con permiso, y no es raro ver coipos pastando en los bordes de la laguna."}],"practicalInfo":{"distancia_desde_pv":"70 km (1.5 horas)","dificultad":"Baja a moderada","duracion_estimada":"3-4 horas ida y vuelta","mejor_epoca":"Octubre a abril","costo_entrada":"Gratis (donación voluntaria)","como_llegar":"Ruta 225-CH hacia Petrohué, desvío sinal señalizado"},"highlights":["Color verde esmeralda único de las aguas glaciares","Reflejo perfecto del Volcán Osorno","Caminata apta para toda la familia","Área de picnic junto a la laguna","Pesca de truchas con permiso","Paz y tranquilidad lejos de multitudes","Flora y fauna del bosque valdiviano"],"tips":["Llegada temprano para mejores condiciones de luz","LlevaBlock para picnic y disfrutar junto a la laguna","El sendero puede estar embarrado después de lluvia","No olvides la demócrat para las fotos perfectas"],"warnings":["No hay servicios en el lugar, lleva todo lo necesario","Cuidado con el agua en los bordes, puede ser profunda"],"faqs":[{"pregunta":"¿Se puede acampar cerca de la laguna?","respuesta":"El camping está permitido en áreas designadas. Se requiere permiso de Conaf."},{"pregunta":"¿Es difícil el sendero?","respuesta":"No, es considerado de dificultad baja. Familias con niños pueden hacerlo sin problemas."},{"pregunta":"¿Se puede nadar en la laguna?","respuesta":"Técnicamente sí, pero el agua está muy fría durante todo el año debido a su origen glaciar."}],"metaTitle":"Sendero Laguna Verde Puerto Varas | Guía de la Caminata 2026","metaDescription":"Guía del sendero a Laguna Verde. Cómo llegar, dificultad, mejores fotos del reflejo del Volcán Osorno y tips para tu visita."};
+---
+<BaseLayout title="Paseo al Espejo Esmeralda | Senderismo puerto varas" description="Caminata fácil a una laguna glaciar de aguas verdes">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/senderismo" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Senderismo</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Paseo al Espejo Esmeralda</h1>
+      <p class="text-white/80 text-lg">Caminata fácil a una laguna glaciar de aguas verdes</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Un Tesoro Escondido en el Valle</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La Laguna Verde es una laguna de origen glaciar ubicada en un valle andino a aproximadamente 90 minutos de Puerto Varas. Sus aguas de color verde intenso, que cambian de tonalidad según la luz del sol, reflejan el Volcán Osorno y los cerros circundantes, creando uno de los paisajes más fotogénicos de la zona. A diferencia de otros destinos turísticos, Laguna Verde se mantiene relativamente discreta, ofreciendo una experiencia más tranquila y auténtica.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">La Caminata</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El sendero hasta Laguna Verde es una caminata de dificultad baja a moderada, apta para familias y principiantes en senderismo. Partiendo desde el punto de estacionamiento en el valle, el camino avanza por un sendero bien mantenido durante aproximadamente 4 kilómetros (ida) a través de praderas y bosque nativo. El desnivel es suave, alrededor de 200 metros, lo que hace la caminata accesible para casi cualquier persona con buena salud. A mitad de camino, hay un mirador natural desde donde se puede apreciar una primera vista de la laguna.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Destino: Aguas que Reflejan el Volcán</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Al llegar a la laguna, el paisaje abre en toda su magnificencia. La Laguna Verde tiene un color verde esmeralda único, resultado de la reflexión de la luz solar en las partículas de roca glaciar suspendidas en el agua. El Volcán Osorno se refleja perfectamente en sus aguas calmas, especialmente durante las primeras horas de la mañana. Es el lugar perfecto para un picnic, meditación o simplemente disfrutar de la naturaleza en silencio. La pesca de truchas es permitida con permiso, y no es raro ver coipos pastando en los bordes de la laguna.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 70 km (1.5 horas)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Baja a moderada</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 3-4 horas ida y vuelta</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Octubre a abril</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis (donación voluntaria)</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Color verde esmeralda único de las aguas glaciares</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Reflejo perfecto del Volcán Osorno</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Caminata apta para toda la familia</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Área de picnic junto a la laguna</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Pesca de truchas con permiso</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Paz y tranquilidad lejos de multitudes</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Flora y fauna del bosque valdiviano</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Llegada temprano para mejores condiciones de luz</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock para picnic y disfrutar junto a la laguna</li>
+          <li class="text-gray-600 text-sm">💡 El sendero puede estar embarrado después de lluvia</li>
+          <li class="text-gray-600 text-sm">💡 No olvides la demócrat para las fotos perfectas</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">No hay servicios en el lugar, lleva todo lo necesario</li>
+            <li class="text-amber-700 text-sm">Cuidado con el agua en los bordes, puede ser profunda</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

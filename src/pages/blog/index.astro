@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { blogTopics } from '../../data/content';
+---
+<BaseLayout title="Blog | tupuertovaras" description="Noticias, guías y tendencias de puerto varas.">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h1 class="text-4xl font-black text-white">Blog</h1>
+      <p class="text-white/80 text-lg">Noticias, guías y tendencias de puerto varas.</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="space-y-6">
+      {blogTopics.map((post) => (
+        <a href={'/blog/' + post.slug} class="block bg-white border border-gray-100 rounded-xl p-6 no-underline hover:shadow-lg transition-all">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">{post.type || 'artículo'}</span>
+            <span class="text-xs text-gray-400">{post.estimated_words || 1000} palabras</span>
+          </div>
+          <h2 class="font-bold text-xl text-gray-900 mb-1">{post.title}</h2>
+          <p class="text-gray-500 text-sm">{post.target_keyword || ''}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['senderismo'] || [];
+const item = items.find((i) => i.slug === 'ruta-ensenada-puerto-varas') || {"slug":"ruta-ensenada-puerto-varas","name":"Ruta de los Miradores: Ensenada","category_slug":"senderismo","heroTitle":"Panorámicas que Quitan el Aliento","heroSubtitle":"Caminata por la ruta de los miradores hacia Ensenada","sections":[{"title":"La Ruta de los 180 Grados","content":"La carretera entre Puerto Varas y Ensenada es considerada una de las rutas escénicas más espectaculares de Chile. A medida que asciendes por las faldas del Volcán Osorno, el paisaje se transforma dramáticamente: praderas verdes dan paso a bosques andinos, y eventualmente a estepa patagónica. A lo largo de la ruta, miradores naturales ofrecen vistas de 180 grados del Lago Llanquihue, el Volcán Osorno, el Volcán Calbuco y, en días claros, incluso el Pacífico."},{"title":"Miradores Imperdibles","content":"El primer gran mirador está a solo 25 km de Puerto Varas, donde un cartel de madera marca el punto perfecto para la foto icónica: el Volcán Osorno reflejándose en el Lago Llanquihue. Siguiendo hacia Ensenada, encontrarás pequeños senderos a miradores menos conocidos que ofrecen perspectivas únicas. El pueblo de Ensenada en sí es el destino final, con su iglesia de madera y la proximidad a los Saltos de Petrohué. Puedes hacer esta ruta en auto parando en cada mirador, o en bicicleta para una experiencia más inmersiva."}],"practicalInfo":{"distancia_desde_pv":"45 km a Ensenada","dificultad":"Fácil (en auto) a moderada (en bicicleta)","duracion_estimada":"3-4 horas ida y vuelta","mejor_epoca":"Todo el año","costo_entrada":"Gratis","como_llegar":"Ruta 225-CH hacia Ensenada"},"highlights":["Vistas panorámicas de 180° del Lago Llanquihue","Pueblo de Ensenada con encanto rural","Iglesia de madera histórica","Sector de ski del Volcán Osorno","Aproximación a Saltos de Petrohué","Ruta perfecta para fotografía de paisajes"],"tips":["Detente en cada mirador, las fotos de mañana son mejores","En verano aprovecha para almorzar en Ensenada","En invierno el paisaje nevado es mágico","LlevaBlock para picnic en algún mirador apartado"],"warnings":["La ruta puede tener niebla densa, maneja con precaución"],"faqs":[{"pregunta":"¿Se puede hacer en bicicleta?","respuesta":"Sí, es una ruta popular para cicloturismo. El descenso es suave y los paisajes son espectaculares."}],"metaTitle":"Ruta de los Miradores Ensenada desde Puerto Varas | Guía 2026","metaDescription":"Guía de la ruta escénica Puerto Varas a Ensenada. Mejores miradores, historia y tips para fotografía de paisajes."};
+---
+<BaseLayout title="Panorámicas que Quitan el Aliento | Senderismo puerto varas" description="Caminata por la ruta de los miradores hacia Ensenada">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/senderismo" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Senderismo</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Panorámicas que Quitan el Aliento</h1>
+      <p class="text-white/80 text-lg">Caminata por la ruta de los miradores hacia Ensenada</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">La Ruta de los 180 Grados</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La carretera entre Puerto Varas y Ensenada es considerada una de las rutas escénicas más espectaculares de Chile. A medida que asciendes por las faldas del Volcán Osorno, el paisaje se transforma dramáticamente: praderas verdes dan paso a bosques andinos, y eventualmente a estepa patagónica. A lo largo de la ruta, miradores naturales ofrecen vistas de 180 grados del Lago Llanquihue, el Volcán Osorno, el Volcán Calbuco y, en días claros, incluso el Pacífico.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Miradores Imperdibles</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El primer gran mirador está a solo 25 km de Puerto Varas, donde un cartel de madera marca el punto perfecto para la foto icónica: el Volcán Osorno reflejándose en el Lago Llanquihue. Siguiendo hacia Ensenada, encontrarás pequeños senderos a miradores menos conocidos que ofrecen perspectivas únicas. El pueblo de Ensenada en sí es el destino final, con su iglesia de madera y la proximidad a los Saltos de Petrohué. Puedes hacer esta ruta en auto parando en cada mirador, o en bicicleta para una experiencia más inmersiva.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 45 km a Ensenada</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil (en auto) a moderada (en bicicleta)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> 3-4 horas ida y vuelta</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Vistas panorámicas de 180° del Lago Llanquihue</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Pueblo de Ensenada con encanto rural</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Iglesia de madera histórica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Sector de ski del Volcán Osorno</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Aproximación a Saltos de Petrohué</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Ruta perfecta para fotografía de paisajes</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Detente en cada mirador, las fotos de mañana son mejores</li>
+          <li class="text-gray-600 text-sm">💡 En verano aprovecha para almorzar en Ensenada</li>
+          <li class="text-gray-600 text-sm">💡 En invierno el paisaje nevado es mágico</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock para picnic en algún mirador apartado</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">La ruta puede tener niebla densa, maneja con precaución</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

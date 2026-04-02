@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['alrededores'] || [];
+const item = items.find((i) => i.slug === 'frutillar-desde-puerto-varas') || {"slug":"frutillar-desde-puerto-varas","name":"Frutillar","heroTitle":"La Ciudad Alemana a 30 Minutos","heroSubtitle":"Pueblo patrimonial con arquitectura bávara y fábricas de chocolate","sections":[{"title":"Patrimonio Alemán Vivo","content":"Frutillar es conocido como la ciudad alemana de Chile debido a su arquitectura bávara y la herencia de los colonos alemanes que llegaron en 1850. Sus casas de madera coloridas,techumbre inclinadas y jardines prolijostransportan a los visitantes a otro mundo. La ciudad tiene categoría de Zona Típica por el Consejo de Monumentos Nacionales, lo que protege su patrimonio arquitectónico único en el país. Caminar por sus calles es hacer un viaje en el tiempo a la Bavaria del siglo XIX."},{"title":"Chocolate y Cerveza Artesanal","content":"La Ruta del Chocolate y la Cerveza Artesanal de Frutillar es una experiencia imperdible. Puedes visitar fábricas de chocolate artesanal donde observas el proceso de elaboración y degusta productos únicos. La Cervecería Kunstmann, ubicada a las afueras, es un complejo gastronómico con restaurant, brewery tour y tienda. Ambas experiencias se pueden combinar en un día completo desde Puerto Varas."},{"title":"Playa y Entretención","content":"La Playa Carreras en Frutillar es una de las más populares del Lago Llanquihue, con aguas tranquilas ideales para familias. El Teatro del Lago, un moderno centro cultural, ofrece shows y exposiciones durante todo el año. Los fines de semana hay ferias artesanales en la costanera donde puedes comprar lana, mermeladas y productos locales."}],"practicalInfo":{"distancia_desde_pv":"35 km (40 minutos)","dificultad":"Fácil","duracion_estimada":"Medio día a día completo","mejor_epoca":"Todo el año","costo_entrada":"Gratis (atracciones pagadas)"},"highlights":["Arquitectura alemana bávara única","Fábrica de chocolate artesanal","Playa Carreras apta para familias","Teatro del Lago con programación cultural","Cervecería Kunstmann con tours"],"tips":["Combina chocolate + cerveza en un solo día","Llegada temprano para evitar grupos turísticos","La costanera es perfecta para caminar al atardecer"],"warnings":["En verano la playa se llena, llega antes de las 10 AM"],"faqs":[{"pregunta":"¿Cómo llegar a Frutillar desde Puerto Varas?","respuesta":"En auto por ruta 5 Sur, o en bus desde el terminal de Puerto Varas (cada 30 minutos, $1.800 CLP)."},{"pregunta":"¿Cuántas horas necesito para conocer Frutillar?","respuesta":"Con 4-5 horas puedes ver lo principal. Para hacer la ruta del chocolate y cerveza necesitas día completo."}]};
+---
+<BaseLayout title="La Ciudad Alemana a 30 Minutos | Alrededores puerto varas" description="Pueblo patrimonial con arquitectura bávara y fábricas de chocolate">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/alrededores" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Alrededores</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">La Ciudad Alemana a 30 Minutos</h1>
+      <p class="text-white/80 text-lg">Pueblo patrimonial con arquitectura bávara y fábricas de chocolate</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Patrimonio Alemán Vivo</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Frutillar es conocido como la ciudad alemana de Chile debido a su arquitectura bávara y la herencia de los colonos alemanes que llegaron en 1850. Sus casas de madera coloridas,techumbre inclinadas y jardines prolijostransportan a los visitantes a otro mundo. La ciudad tiene categoría de Zona Típica por el Consejo de Monumentos Nacionales, lo que protege su patrimonio arquitectónico único en el país. Caminar por sus calles es hacer un viaje en el tiempo a la Bavaria del siglo XIX.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Chocolate y Cerveza Artesanal</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La Ruta del Chocolate y la Cerveza Artesanal de Frutillar es una experiencia imperdible. Puedes visitar fábricas de chocolate artesanal donde observas el proceso de elaboración y degusta productos únicos. La Cervecería Kunstmann, ubicada a las afueras, es un complejo gastronómico con restaurant, brewery tour y tienda. Ambas experiencias se pueden combinar en un día completo desde Puerto Varas.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Playa y Entretención</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La Playa Carreras en Frutillar es una de las más populares del Lago Llanquihue, con aguas tranquilas ideales para familias. El Teatro del Lago, un moderno centro cultural, ofrece shows y exposiciones durante todo el año. Los fines de semana hay ferias artesanales en la costanera donde puedes comprar lana, mermeladas y productos locales.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 35 km (40 minutos)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> Medio día a día completo</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis (atracciones pagadas)</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Arquitectura alemana bávara única</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Fábrica de chocolate artesanal</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playa Carreras apta para familias</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Teatro del Lago con programación cultural</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Cervecería Kunstmann con tours</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Combina chocolate + cerveza en un solo día</li>
+          <li class="text-gray-600 text-sm">💡 Llegada temprano para evitar grupos turísticos</li>
+          <li class="text-gray-600 text-sm">💡 La costanera es perfecta para caminar al atardecer</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">En verano la playa se llena, llega antes de las 10 AM</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

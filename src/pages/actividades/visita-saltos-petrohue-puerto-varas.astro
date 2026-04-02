@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catListing } from '../../data/content';
+const items = catListing['actividades'] || [];
+const item = items.find((i) => i.slug === 'visita-saltos-petrohue-puerto-varas') || {"slug":"visita-saltos-petrohue-puerto-varas","name":"Saltos de Petrohué","category_slug":"actividades","shortDescription":"Cascadas de agua turquesa en el Parque Nacional Vicente Perez Rosales.","rating":4.9,"reviewCount":2345,"priceRange":"$","address":"Parque Nacional Vicente Perez Rosales, Puerto Varas","tags":["cascadas","naturaleza","parque"],"tip":"Comprar entrada online evita la fila en temporada alta.","bestFor":"naturaleza","season":"todo-el-año","neighborhood":"petrohue"};
+---
+<BaseLayout title="Saltos de Petrohué | Qué Hacer puerto varas" description="Cascadas de agua turquesa en el Parque Nacional Vicente Perez Rosales.">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/actividades" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Qué Hacer</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Saltos de Petrohué</h1>
+      <div class="flex flex-wrap items-center gap-3 text-white/80 text-sm mt-4">
+        <span class="text-amber-300">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>({item.reviewCount || 0} reseñas)</span>
+        <span class="bg-white/20 px-3 py-1 rounded-full">$</span>
+        <span>📍 petrohue</span>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="h-64 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl flex items-center justify-center mb-8">
+          <span class="text-6xl">🧭</span>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Sobre Saltos de Petrohué</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">Cascadas de agua turquesa en el Parque Nacional Vicente Perez Rosales.</p>
+        
+        
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">cascadas</span>
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">naturaleza</span>
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">parque</span>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">📍 Dirección</h4><p class="text-gray-600 text-sm">Parque Nacional Vicente Perez Rosales, Puerto Varas</p></div>
+        
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Precio</h4>
+          <p class="text-gray-600 text-sm">$</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">👥 Ideal para</h4><p class="text-gray-600 text-sm">naturaleza</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🗓️ Temporada</h4><p class="text-gray-600 text-sm">todo-el-año</p></div>
+        <div class="bg-purple-50 border border-purple-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-1">💡 Tip local</h4><p class="text-purple-700 text-sm">Comprar entrada online evita la fila en temporada alta.</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

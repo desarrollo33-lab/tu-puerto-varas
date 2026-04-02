@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['alrededores'] || [];
+const item = items.find((i) => i.slug === 'puerto-octay-desde-puerto-varas') || {"slug":"puerto-octay-desde-puerto-varas","name":"Puerto Octay","heroTitle":"El Fin del Lago Llanquihue","heroSubtitle":"Pueblo pescador con historia alemana y vistas al volcan","sections":[{"title":"Pueblo con Historia","content":"Puerto Octay está ubicado en la ribera norte del Lago Llanquihue, exactamente donde el lago se conecta con el Río Maullín. Fundado por colonos alemanes en 1876, conserva casonas patrimoniales y una iglesia construida por missionaries alemanes. Su muelle antiguo es punto de partida de lanchas que cruzan el lago y de actividades de pesca artesanal."},{"title":"Gastronomía de Origen","content":"Puerto Octay es famoso por sus restaurantes de cocina tradicional alemana y chilena. La Posada del咬着 es un restaurant con más de 100 años de historia que serve cordero al palo y vindikte. También hay cocinerías de barrio donde probar empanadas de queso y cazuela de vacuno como los antiguos colonos."},{"title":"Actividades al Aire Libre","content":"El sector de La Pasada ofrece acceso a playas tranquilas y areas de camping. Los kayakistas encuentran rutas espectaculares navigando hacia la desembocadura del Maullín. En temporada, el pueblo hosting el Festival del Salmón que atrae a miles de visitantes con música y gastronomía."}],"practicalInfo":{"distancia_desde_pv":"55 km (1 hora)","dificultad":"Fácil","duracion_estimada":"Medio día","mejor_epoca":"Todo el año","costo_entrada":"Gratis"},"highlights":["Casonas alemanas patrimoniales","Restaurantes tradicionales centenarios","Muelle histórico con lanchas","Playa La Pasada tranquila","Festival del Salmón en temporada"],"tips":["Prueba la cazuela en la Posada del咬着","El atardecer desde el muelle es spectacular","Combina con Frutillar en el mismo día"],"warnings":["Algunas calles son de ripio, maneja con precaución"],"faqs":[{"pregunta":"¿Se puede acampar en Puerto Octay?","respuesta":"Sí, hay camping autorizados en La Pasada con equipamiento básico."},{"pregunta":"¿Hay restaurants abiertos todo el año?","respuesta":"Los restaurants principales abren todo el año, pero algunos cocinerías cierran en invierno."}]};
+---
+<BaseLayout title="El Fin del Lago Llanquihue | Alrededores puerto varas" description="Pueblo pescador con historia alemana y vistas al volcan">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/alrededores" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Alrededores</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Fin del Lago Llanquihue</h1>
+      <p class="text-white/80 text-lg">Pueblo pescador con historia alemana y vistas al volcan</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Pueblo con Historia</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Puerto Octay está ubicado en la ribera norte del Lago Llanquihue, exactamente donde el lago se conecta con el Río Maullín. Fundado por colonos alemanes en 1876, conserva casonas patrimoniales y una iglesia construida por missionaries alemanes. Su muelle antiguo es punto de partida de lanchas que cruzan el lago y de actividades de pesca artesanal.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Gastronomía de Origen</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Puerto Octay es famoso por sus restaurantes de cocina tradicional alemana y chilena. La Posada del咬着 es un restaurant con más de 100 años de historia que serve cordero al palo y vindikte. También hay cocinerías de barrio donde probar empanadas de queso y cazuela de vacuno como los antiguos colonos.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Actividades al Aire Libre</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El sector de La Pasada ofrece acceso a playas tranquilas y areas de camping. Los kayakistas encuentran rutas espectaculares navigando hacia la desembocadura del Maullín. En temporada, el pueblo hosting el Festival del Salmón que atrae a miles de visitantes con música y gastronomía.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 55 km (1 hora)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Fácil</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> Medio día</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Todo el año</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> Gratis</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Casonas alemanas patrimoniales</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Restaurantes tradicionales centenarios</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Muelle histórico con lanchas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Playa La Pasada tranquila</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Festival del Salmón en temporada</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Prueba la cazuela en la Posada del咬着</li>
+          <li class="text-gray-600 text-sm">💡 El atardecer desde el muelle es spectacular</li>
+          <li class="text-gray-600 text-sm">💡 Combina con Frutillar en el mismo día</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">Algunas calles son de ripio, maneja con precaución</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

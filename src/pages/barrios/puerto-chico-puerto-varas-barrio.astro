@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['barrios'] || [];
+const item = items.find((i) => i.slug === 'puerto-chico-puerto-varas-barrio') || {"slug":"puerto-chico-puerto-varas-barrio","name":"Puerto Chico","zone":"Residencial Turístico","neighborhoods":["Sector Muelle Chico","Calle La Progreso","Sector Lanchas"],"landmarks":["Lanchas Coloridas","Paseo Lanchas","Café del Lago"],"geo":{"lat":-41.3148,"lng":-72.9812},"vibe":"Bohemio y authentic","costo_arriendo":"$300.000 - $550.000 CLP/mes","idealPara":["locales","fotos","pesca","overnight"],"heroTitle":"El Puerto Auténtico de Puerto Varas","heroSubtitle":"Lanchas coloridas, pubs waterfront y vida nocturna","sections":[{"title":"El Puerto Histórico","content":"Puerto Chico es el sector portuario tradicional de Puerto Varas, donde las lanchas pesqueras siguen trabajando. A diferencia de la costanera turística, aquí la vida gira alrededor de la actividad pesquera. Las lanchas coloridas against el fondo del volcan crean una estampa única perfect para fotos."},{"title":"Gastronomía Acuática","content":"Los restaurants de Puerto Chico ofrecen comida de mar frescura directo del mar. Las cocinerías de la calle Puerto sirven empanadas de jaiba, caldillo de locos y pulpo a la gallega a precios locals. Es el mejor lugar para comer barato y auténtico."},{"title":"Vida Nocturna Local","content":"Puerto Chico concentra los pubs y bares preferidos por locals y mochileros. El ambiente es más relajado y menos turístico que la costanera. Los precios son más accesibles y la gente más relajada."}],"highlights":["Lanchas pesqueras auténticas","Comida de mar económica","Pubs con ambiente local","Fotos icónicas sin turistas","Costo de vida más bajo"],"tips":["Ve al atardecer para fotos increibles","Prueba las empanadas de jaiba en la calle Puerto","Los bares abren hasta las 3 AM los fines de semana"],"warnings":["Algunas calles son oscuras de noche, ve acompañado"],"faqs":[{"pregunta":"¿Es seguro caminar de noche?","respuesta":"El sector es seguro pero usa precauciones básicas como en cualquier ciudad."},{"pregunta":"¿Dónde aparcar?","respuesta":"Hay estacionamientos públicos en la calle y algunos pagos en malls cercanos."}]};
+---
+<BaseLayout title="El Puerto Auténtico de Puerto Varas | Barrios puerto varas" description="Lanchas coloridas, pubs waterfront y vida nocturna">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/barrios" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Barrios</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">El Puerto Auténtico de Puerto Varas</h1>
+      <p class="text-white/80 text-lg">Lanchas coloridas, pubs waterfront y vida nocturna</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Puerto Histórico</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Puerto Chico es el sector portuario tradicional de Puerto Varas, donde las lanchas pesqueras siguen trabajando. A diferencia de la costanera turística, aquí la vida gira alrededor de la actividad pesquera. Las lanchas coloridas against el fondo del volcan crean una estampa única perfect para fotos.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Gastronomía Acuática</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Los restaurants de Puerto Chico ofrecen comida de mar frescura directo del mar. Las cocinerías de la calle Puerto sirven empanadas de jaiba, caldillo de locos y pulpo a la gallega a precios locals. Es el mejor lugar para comer barato y auténtico.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Vida Nocturna Local</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Puerto Chico concentra los pubs y bares preferidos por locals y mochileros. El ambiente es más relajado y menos turístico que la costanera. Los precios son más accesibles y la gente más relajada.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          
+          
+          
+          
+          
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Lanchas pesqueras auténticas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Comida de mar económica</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Pubs con ambiente local</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Fotos icónicas sin turistas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Costo de vida más bajo</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Ve al atardecer para fotos increibles</li>
+          <li class="text-gray-600 text-sm">💡 Prueba las empanadas de jaiba en la calle Puerto</li>
+          <li class="text-gray-600 text-sm">💡 Los bares abren hasta las 3 AM los fines de semana</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">Algunas calles son oscuras de noche, ve acompañado</li></ul></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🎭 Vibra</h4><p class="text-gray-600 text-sm">Bohemio y authentic</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Arriendo</h4><p class="text-gray-600 text-sm">$300.000 - $550.000 CLP/mes</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

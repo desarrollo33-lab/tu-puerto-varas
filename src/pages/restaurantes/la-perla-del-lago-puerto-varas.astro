@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catListing } from '../../data/content';
+const items = catListing['restaurantes'] || [];
+const item = items.find((i) => i.slug === 'la-perla-del-lago-puerto-varas') || {"slug":"la-perla-del-lago-puerto-varas","name":"La Perla del Lago","category_slug":"restaurantes","shortDescription":"Restaurant frente al lago con specialize en salmón y trucha.","rating":4.5,"reviewCount":934,"priceRange":"$$$","address":"Costanera Ignacio Carrera 850, Puerto Varas","tags":["salmón","trucha","lago","romantico"],"features":["Vista 180°","Salmón ahumado","Cocteles","Música en vivo"],"tip":"Hora feliz de 18:00 a 19:00 con descuentos en piscosour.","bestFor":"atardeceres","season":"verano","neighborhood":"costanera"};
+---
+<BaseLayout title="La Perla del Lago | Restaurantes puerto varas" description="Restaurant frente al lago con specialize en salmón y trucha.">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/restaurantes" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Restaurantes</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">La Perla del Lago</h1>
+      <div class="flex flex-wrap items-center gap-3 text-white/80 text-sm mt-4">
+        <span class="text-amber-300">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>({item.reviewCount || 0} reseñas)</span>
+        <span class="bg-white/20 px-3 py-1 rounded-full">$$$</span>
+        <span>📍 costanera</span>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="h-64 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl flex items-center justify-center mb-8">
+          <span class="text-6xl">🍽️</span>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Sobre La Perla del Lago</h2>
+        <p class="text-gray-600 leading-relaxed mb-6">Restaurant frente al lago con specialize en salmón y trucha.</p>
+        
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Lo mejor</h3>
+        <ul class="space-y-2 mb-6">
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-green-500 mt-1">✓</span> Vista 180°</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-green-500 mt-1">✓</span> Salmón ahumado</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-green-500 mt-1">✓</span> Cocteles</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-green-500 mt-1">✓</span> Música en vivo</li>
+        </ul>
+        
+        <div class="flex flex-wrap gap-2 mt-6">
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">salmón</span>
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">trucha</span>
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">lago</span>
+          <span class="bg-gray-100 text-gray-600 text-xs px-3 py-1 rounded-full">romantico</span>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">📍 Dirección</h4><p class="text-gray-600 text-sm">Costanera Ignacio Carrera 850, Puerto Varas</p></div>
+        
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-1">💰 Precio</h4>
+          <p class="text-gray-600 text-sm">$$$</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">👥 Ideal para</h4><p class="text-gray-600 text-sm">atardeceres</p></div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-1">🗓️ Temporada</h4><p class="text-gray-600 text-sm">verano</p></div>
+        <div class="bg-purple-50 border border-purple-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-1">💡 Tip local</h4><p class="text-purple-700 text-sm">Hora feliz de 18:00 a 19:00 con descuentos en piscosour.</p></div>
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

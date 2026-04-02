@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { categories, testimonials, aggregateReview, city } from '../data/content';
+const highCats = categories.filter((c) => c.funnel === 'high');
+const medCats = categories.filter((c) => c.funnel === 'medium');
+const lowCats = categories.filter((c) => c.funnel === 'low');
+---
+<BaseLayout title="tupuertovaras.cl | La guía completa de puerto varas" description="Descubre puerto varas: turismo, restaurantes, actividades, barrios y propiedades. Todo lo que necesitas para visitar o vivir en el sur de Chile.">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6">
+          <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+          <span class="text-white/80 text-sm font-medium">puerto varas, Chile</span>
+        </div>
+        <h1 class="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-tight mb-6">
+          Tu guía para<br />vivir <span style="color: #F59E0B;">puerto varas</span>
+        </h1>
+        <p class="text-xl text-white/80 mb-8 max-w-2xl leading-relaxed">
+          Restaurantes, actividades, barrios, clima, costo de vida y propiedades.
+          Todo lo que necesitas para conocer y enamorarte del sur.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/restaurantes" class="inline-flex items-center justify-center gap-2 bg-white font-bold px-6 py-4 rounded-xl no-underline text-lg hover:bg-gray-50 transition-colors" style="color: #6D28D9;">
+            🍽️ Explorar puerto varas
+          </a>
+          <a href="https://tucorretaje.cl" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white/20 text-white font-semibold px-6 py-4 rounded-xl border-2 border-white/30 no-underline text-lg hover:bg-white/30 transition-colors">
+            🏠 Ver propiedades
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-black text-gray-900 mb-2">Qué hacer en puerto varas</h2>
+      <p class="text-gray-500 mb-8">Turismo, gastronomía, aventura y más.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {highCats.map((c) => (
+          <a href={'/' + c.slug} class="group block bg-white border border-gray-100 rounded-2xl p-6 no-underline hover:shadow-xl transition-all duration-300">
+            <span class="text-3xl mb-3 block">{c.icon}</span>
+            <h2 class="font-bold text-gray-900 group-hover:text-purple-600 transition-colors">{c.name}</h2>
+            <p class="text-gray-400 text-sm mt-1">Explorar →</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-black text-gray-900 mb-2">Información para vivir</h2>
+      <p class="text-gray-500 mb-8">Todo lo que necesitas saber si quieres mudarte.</p>
+      <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3">
+        {medCats.map((c) => (
+          <a href={'/' + c.slug} class="group block bg-white border border-gray-100 rounded-xl p-4 no-underline hover:shadow-lg transition-all text-center">
+            <span class="text-2xl mb-2 block">{c.icon}</span>
+            <h3 class="font-semibold text-gray-900 text-xs group-hover:text-purple-600 transition-colors">{c.name}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16" style="background: #6D28D9;">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-black text-white mb-4">¿Quieres vivir en puerto varas?</h2>
+      <p class="text-white/80 text-lg mb-8">Explora propiedades, barrios y todo lo que necesitas para dar el paso.</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        {lowCats.map((c) => (
+          <a href={'/' + c.slug} class="inline-flex items-center gap-2 bg-white/20 text-white font-semibold px-5 py-3 rounded-xl border-2 border-white/30 no-underline hover:bg-white/30 transition-colors">
+            {c.icon} {c.name}
+          </a>
+        ))}
+        <a href="https://tucorretaje.cl" target="_blank" class="inline-flex items-center gap-2 bg-white font-bold px-6 py-3 rounded-xl no-underline hover:bg-gray-50 transition-colors" style="color: #6D28D9;">
+          🏠 Ver propiedades disponibles
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

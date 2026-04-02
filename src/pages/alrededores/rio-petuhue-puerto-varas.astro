@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { catGuide } from '../../data/content';
+const items = catGuide['alrededores'] || [];
+const item = items.find((i) => i.slug === 'rio-petuhue-puerto-varas') || {"slug":"rio-petuhue-puerto-varas","name":"Río Petrohué","heroTitle":"Aguas Esmeraldas de Origen Volcánico","heroSubtitle":"Kayak, pesca y senderismo en el río de los colores","sections":[{"title":"El Río de los Colores","content":"El Río Petrohué es famous por sus aguas de color verde esmeralda intenso成因 por la presencia de minerales volcánicos. El contraste con las rocas negras de origen lávico crea paisajes surrealistas. El río tiene aproximadamente 70 km de largo y nace en el Lago Todos los Santos para desembocar en el Pacífico."},{"title":"Kayak y Rafting","content":"El río ofrece condiciones ideales para kayak y rafting de diferentes niveles. El tramo cercano a la desembocadura tieneClass III-IV para adrenalina, mientras que secciones superiores son más tranquilas para familias. Varias agencias de Puerto Varas ofrecen tours con transporte e instructor."},{"title":"Pesca con Mosca","content":"El Petrohué es reconocido internacionalmente como destino de pesca con mosca. Las truchas arcoíris y marrones crecen grandes gracias a las condiciones únicas del río. La temporada alta es entre noviembre y abril, con pescadores de todo el mundo llegando para la experiencia de sus vidas."}],"practicalInfo":{"distancia_desde_pv":"80 km (1.5 horas)","dificultad":"Variable según actividad","duracion_estimada":"Día completo","mejor_epoca":"Octubre a abril","costo_entrada":"$5.000 CLP (sector parque)"},"highlights":["Aguas verde esmeralda únicas","Rafting class III-IV emocionante","Pesca con mosca internacional","Kayak para familias","Senderismo en ribera"],"tips":["Reserva kayak o rafting con anticipación","La mejor época para pesca es marzo-abril","LlevaBlock impermeable para tu cámara"],"warnings":["El clima cambia rápido, lleva ropa de lluvia"],"faqs":[{"pregunta":"¿Necesito experiencia para rafting?","respuesta":"No, hay opciones para principiantes y familias. Los instructores dan training incluido."},{"pregunta":"¿Se puede acampar cerca del río?","respuesta":"El camping está permitido dentro del parque nacional con permiso de Conaf."}]};
+---
+<BaseLayout title="Aguas Esmeraldas de Origen Volcánico | Alrededores puerto varas" description="Kayak, pesca y senderismo en el río de los colores">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <a href="/alrededores" class="text-white/70 text-sm hover:text-white no-underline mb-4 inline-block">← Volver a Alrededores</a>
+      <h1 class="text-3xl lg:text-4xl font-black text-white mb-2">Aguas Esmeraldas de Origen Volcánico</h1>
+      <p class="text-white/80 text-lg">Kayak, pesca y senderismo en el río de los colores</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">El Río de los Colores</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Río Petrohué es famous por sus aguas de color verde esmeralda intenso成因 por la presencia de minerales volcánicos. El contraste con las rocas negras de origen lávico crea paisajes surrealistas. El río tiene aproximadamente 70 km de largo y nace en el Lago Todos los Santos para desembocar en el Pacífico.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Kayak y Rafting</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El río ofrece condiciones ideales para kayak y rafting de diferentes niveles. El tramo cercano a la desembocadura tieneClass III-IV para adrenalina, mientras que secciones superiores son más tranquilas para familias. Varias agencias de Puerto Varas ofrecen tours con transporte e instructor.</div></div>
+          <div class="mb-8"><h2 class="text-2xl font-bold text-gray-900 mb-3">Pesca con Mosca</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Petrohué es reconocido internacionalmente como destino de pesca con mosca. Las truchas arcoíris y marrones crecen grandes gracias a las condiciones únicas del río. La temporada alta es entre noviembre y abril, con pescadores de todo el mundo llegando para la experiencia de sus vidas.</div></div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-gray-50 rounded-xl p-4">
+          <h4 class="font-semibold text-sm text-gray-900 mb-3">📋 Info Práctica</h4>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Distancia:</span> 80 km (1.5 horas)</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Dificultad:</span> Variable según actividad</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Duración:</span> Día completo</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Mejor época:</span> Octubre a abril</p>
+          <p class="text-sm text-gray-600 mb-1"><span class="font-medium">Entrada:</span> $5.000 CLP (sector parque)</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-gray-900 mb-3">⭐ Highlights</h4><ul class="space-y-1"><li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Aguas verde esmeralda únicas</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Rafting class III-IV emocionante</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Pesca con mosca internacional</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Kayak para familias</li>
+          <li class="flex items-start gap-2 text-gray-600"><span class="text-purple-500 mt-0.5">▸</span> Senderismo en ribera</li></ul></div>
+        <div class="bg-purple-50 rounded-xl p-4"><h4 class="font-semibold text-sm text-purple-900 mb-3">💡 Tips</h4><ul class="space-y-2"><li class="text-gray-600 text-sm">💡 Reserva kayak o rafting con anticipación</li>
+          <li class="text-gray-600 text-sm">💡 La mejor época para pesca es marzo-abril</li>
+          <li class="text-gray-600 text-sm">💡 LlevaBlock impermeable para tu cámara</li></ul></div>
+        <div class="bg-amber-50 border border-amber-100 rounded-xl p-4"><h4 class="font-semibold text-sm text-amber-900 mb-3">⚠️ Precauciones</h4><ul class="space-y-1"><li class="text-amber-700 text-sm">El clima cambia rápido, lleva ropa de lluvia</li></ul></div>
+        
+        
+        <a href="https://tucorretaje.cl" target="_blank" class="block text-center text-white font-bold py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

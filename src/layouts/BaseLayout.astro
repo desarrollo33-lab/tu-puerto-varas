@@ -1,0 +1,117 @@
+---
+import { siteConfig } from '../data/content';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+const currentUrl = canonical || new URL(Astro.url.pathname, siteConfig.url).href;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>${title}</title>
+  <meta name="description" content=${description} />
+  <link rel="canonical" href=${currentUrl} />
+  <meta property="og:title" content=${title} />
+  <meta property="og:description" content=${description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content=${currentUrl} />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="tupuertovaras" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "tupuertovaras",
+    "url": siteConfig.url,
+    "description": "Portal completo de turismo, datos y propiedades en puerto varas, Chile",
+    "inLanguage": "es"
+  })} />
+</head>
+<body class="min-h-screen flex flex-col bg-white text-gray-900" style="font-family: 'Inter', system-ui, sans-serif;">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 no-underline">
+          <div class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-black text-sm" style="background: #6D28D9;">p</div>
+          <div>
+            <span class="font-extrabold text-sm block leading-tight" style="color: #6D28D9;">tupuertovaras.cl</span>
+            <span class="text-xs text-gray-400 block leading-tight">puerto varas, Chile</span>
+          </div>
+        </a>
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="/" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Inicio</a>
+          <a href="/restaurantes" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Restaurantes</a>
+          <a href="/actividades" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Qué Hacer</a>
+          <a href="/barrios" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Barrios</a>
+          <a href="/vivir" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Vivir en puerto varas</a>
+          <a href="/propiedades" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Propiedades</a>
+          <a href="/blog" class="text-sm font-medium text-gray-700 px-3 py-2 rounded-lg hover:bg-white/60 no-underline transition-colors">Blog</a>
+        </nav>
+        <a href="https://tucorretaje.cl" target="_blank"
+          class="hidden sm:inline-flex items-center gap-2 text-white font-bold px-5 py-2.5 rounded-xl no-underline text-sm hover:opacity-90 transition-opacity"
+          style="background: #6D28D9;">
+          🏠 Propiedades
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="h-16"></div>
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <footer class="text-white py-16" style="background: #6D28D9;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        
+        <div class="md:col-span-2">
+          <h3 class="font-bold text-lg mb-3">tupuertovaras</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">La guía más completa para descubrir y vivir en puerto varas.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-3 text-[#DB2777]">Turismo</h4>
+          <ul class="space-y-1">
+            <li><a href="/restaurantes" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🍽️ Restaurantes</a></li>
+            <li><a href="/cafes" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">☕ Cafés</a></li>
+            <li><a href="/bares" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🍻 Bares & Noche</a></li>
+            <li><a href="/actividades" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🧭 Qué Hacer</a></li>
+            <li><a href="/parques" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🌲 Parques Nacionales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-3 text-[#DB2777]">Vivir</h4>
+          <ul class="space-y-1">
+            <li><a href="/barrios" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🏘️ Barrios</a></li>
+            <li><a href="/clima" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🌤️ Clima</a></li>
+            <li><a href="/costo-vida" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">💰 Costo de Vida</a></li>
+            <li><a href="/colegios" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🎓 Colegios</a></li>
+            <li><a href="/salud" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🏥 Salud</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm mb-3 text-[#DB2777]">Inmobiliaria</h4>
+          <ul class="space-y-1">
+            <li><a href="/vivir" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">⭐ Vivir en puerto varas</a></li>
+            <li><a href="/expats" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🌍 Guía Expats</a></li>
+            <li><a href="/propiedades" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🏠 Propiedades</a></li>
+            <li><a href="https://tucorretaje.cl" target="_blank" class="text-gray-400 text-sm hover:text-white no-underline transition-colors">🏠 Ver Propiedades</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 mt-10 pt-6 text-center text-white/50 text-xs">
+        <p>&copy; 2026 tupuertovaras. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
