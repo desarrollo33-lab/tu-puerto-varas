@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const data = {"zonas_seguras":[{"zona":"Centro","nivel":"Muy seguro"},{"zona":"Costanera","nivel":"Seguro"},{"zona":"Lomas del Lago","nivel":"Seguro"},{"zona":"Alam","nivel":"Seguro"}],"zonas_precaucion":[{"zona":"Pichi Pelluco sector rural","nivel":"Precaución noche"},{"zona":"Periferias rurales","nivel":"Precaución noche"}],"emergencias":[{"servicio":"Carabineros","fono":"133"},{"servicio":"Ambulancia","fono":"131"},{"servicio":"Bomberos","fono":"132"},{"servicio":"PDI","fono":"134"},{"servicio":"Hospital Puerto Varas","fono":"+56 65 2270100"},{"servicio":"Taxi seguro","fono":"+56 65 2233445"}],"tips":["No dejar objetos de valor en auto","Usar rutas iluminadas de noche","Compartir ubicacion en trekkings","Contratar guias certificados","Tener numero local de taxi seguro"],"faqs":[{"pregunta":"Puerto Varas es seguro para turistas?","respuesta":"Si, ciudad tranquila. Precacucion normal como en cualquier ciudad."},{"pregunta":"Hospital cerca del centro?","respuesta":"Hospital Puerto Varas a 10 min centro. Atencion 24/7."},{"pregunta":"Farmacias de turno?","respuesta":"Turnos rotativos. Preguntar en farmacia Central."},{"pregunta":"Policia tourist police?","respuesta":"Carabineros turisticos en verano."},{"pregunta":"Seguro viaje recomendado?","respuesta":"Si, siempre incluir cobertura medica Chile."}],"slug":"seguridad"};
+---
+<BaseLayout title="Seguridad puerto varas" description="Datos y comparativas de seguridad en puerto varas">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <span class="text-5xl mb-4 block">🛡️</span>
+      <h1 class="text-4xl lg:text-5xl font-black text-white mb-4">Seguridad</h1>
+      <p class="text-white/80 text-lg max-w-2xl">Datos actualizados para puerto varas.</p>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8"><h2 class="text-xl font-bold text-gray-900 mb-3 capitalize">zonas seguras</h2><div class="overflow-x-auto"><table class="w-full"><thead><tr class="bg-gray-50"><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">zona</th><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">nivel</th></tr></thead><tbody><tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Centro</td><td class="py-2 px-3 text-sm text-gray-600">Muy seguro</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Costanera</td><td class="py-2 px-3 text-sm text-gray-600">Seguro</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Lomas del Lago</td><td class="py-2 px-3 text-sm text-gray-600">Seguro</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Alam</td><td class="py-2 px-3 text-sm text-gray-600">Seguro</td></tr></tbody></table></div></div>
+        <div class="mb-8"><h2 class="text-xl font-bold text-gray-900 mb-3 capitalize">zonas precaucion</h2><div class="overflow-x-auto"><table class="w-full"><thead><tr class="bg-gray-50"><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">zona</th><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">nivel</th></tr></thead><tbody><tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Pichi Pelluco sector rural</td><td class="py-2 px-3 text-sm text-gray-600">Precaución noche</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Periferias rurales</td><td class="py-2 px-3 text-sm text-gray-600">Precaución noche</td></tr></tbody></table></div></div>
+        <div class="mb-8"><h2 class="text-xl font-bold text-gray-900 mb-3 capitalize">emergencias</h2><div class="overflow-x-auto"><table class="w-full"><thead><tr class="bg-gray-50"><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">servicio</th><th class="py-2 px-3 text-left text-xs font-semibold text-gray-500 uppercase">fono</th></tr></thead><tbody><tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Carabineros</td><td class="py-2 px-3 text-sm text-gray-600">133</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Ambulancia</td><td class="py-2 px-3 text-sm text-gray-600">131</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Bomberos</td><td class="py-2 px-3 text-sm text-gray-600">132</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">PDI</td><td class="py-2 px-3 text-sm text-gray-600">134</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Hospital Puerto Varas</td><td class="py-2 px-3 text-sm text-gray-600">+56 65 2270100</td></tr>
+            <tr class="border-b border-gray-50"><td class="py-2 px-3 text-sm text-gray-600">Taxi seguro</td><td class="py-2 px-3 text-sm text-gray-600">+56 65 2233445</td></tr></tbody></table></div></div>
+        <div class="mb-8 bg-gray-50 rounded-xl p-6"><h2 class="text-xl font-bold text-gray-900 mb-3 capitalize">tips</h2><div><div class="flex justify-between py-2 border-b border-gray-50"><span class="text-gray-500 text-sm capitalize">0</span><span class="font-medium text-gray-900 text-sm">No dejar objetos de valor en auto</span></div>
+            <div class="flex justify-between py-2 border-b border-gray-50"><span class="text-gray-500 text-sm capitalize">1</span><span class="font-medium text-gray-900 text-sm">Usar rutas iluminadas de noche</span></div>
+            <div class="flex justify-between py-2 border-b border-gray-50"><span class="text-gray-500 text-sm capitalize">2</span><span class="font-medium text-gray-900 text-sm">Compartir ubicacion en trekkings</span></div>
+            <div class="flex justify-between py-2 border-b border-gray-50"><span class="text-gray-500 text-sm capitalize">3</span><span class="font-medium text-gray-900 text-sm">Contratar guias certificados</span></div>
+            <div class="flex justify-between py-2 border-b border-gray-50"><span class="text-gray-500 text-sm capitalize">4</span><span class="font-medium text-gray-900 text-sm">Tener numero local de taxi seguro</span></div></div></div>
+    <div class="mt-12"><h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details></div>
+    <div class="mt-8 text-center">
+      <a href="https://tucorretaje.cl" target="_blank" class="inline-flex items-center gap-2 text-white font-bold px-6 py-3 rounded-xl no-underline hover:opacity-90 transition-opacity" style="background: #6D28D9;">🏠 Ver propiedades en puerto varas</a>
+    </div>
+  </section>
+</BaseLayout>

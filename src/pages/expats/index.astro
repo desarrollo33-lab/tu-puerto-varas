@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { funnelPages } from '../../data/content';
+const data = funnelPages['expats'] || {};
+---
+<BaseLayout title="Guía Expats" description="Todo lo que necesitas saber sobre guía expats en puerto varas">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <span class="text-5xl mb-4 block">🌍</span>
+      <h1 class="text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4">Guía Expats</h1>
+      <p class="text-white/80 text-xl max-w-3xl mb-8"></p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://tucorretaje.cl" target="_blank"
+          class="inline-flex items-center justify-center gap-2 bg-white font-bold px-8 py-4 rounded-xl no-underline text-lg hover:bg-gray-50 transition-colors"
+          style="color: #6D28D9;">
+          Ver propiedades disponibles
+        </a>
+        <a href="/barrios" class="inline-flex items-center justify-center gap-2 bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 no-underline text-lg hover:bg-white/30 transition-colors">
+          Explorar barrios
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Visas y documentación</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Chile ofrece varias opciones de visa para extranjeros. La Visa de Turismo permite estar hasta 90 días, pero no trabaja. Si planeas quedarte a trabajar, la Visa de Responsabilidad Democrática es para ciudadanos de países sudamericanos con acuerdos vigentes. El Permiso de Trabajo para extranjeros se gestiona en el Departamento de Extranjería de Puerto Montt. Es importante iniciar el proceso con anticipación y contar con todos los documentos apostillados. Un abogado de extranjería local puede ayudarte a navegar los trámites que a veces son lentos. El RUT (Rol Único Tributario) es esencial para cualquier trámite legal y comercial.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Abrir cuenta bancaria</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Abrir una cuenta bancaria en Chile es fundamental para vivir aquí. Los bancos más accesibles son Banco Estado y Banco Santander. Para abrir cuenta necesitarás pasaporte vigente, visa temporal o definitiva, y comprobante de domicilio (cuenta de luz o agua de los últimos 3 meses). Banco Estado es popular entre los extranjeros porque la cuentaRUT no tiene costo de mantenimiento y permite hacer transferencias sin drama. También puedes abrir cuentas en dólares si lo necesitas. Las app bancarias chilenas son modernas y facilitan mucho el día a día. Las tarjetas de crédito están disponibles una vez que tengas historial crediticio local.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Sistema de salud</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Chile tiene un sistema dual de salud: Fonasa (público) e Isapres (privadas). Como extranjero, puedes optar por Fonasa que cubre atención en hospitales públicos y CESFAM a bajo costo. Las Isapres como Banmédica, Colmena o Consalud ofrecen planes más personalizados pero con costos mayores. Para emergencias, el Hospital de Puerto Varas atiende las 24 horas. Es recomendable tener un plan de salud porque los costos de atención privada pueden ser altos. Muchos doctores en Puerto Varas hablan algo de inglés, especialmente en la Clínica Puerto Varas. Farmacias como Farmacia Chilena tienen turno rotativo para atención nocturna.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Impuestos en Chile</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Los impuestos en Chile son distintos a los de otros países. El Impuesto a la Renta depende de tus ingresos y va desde 0% hasta 35% según el tramo. Si trabajas como empleado, el impuesto se descuenta automáticamente de tu liquidación de sueldo. Si eres freelancer o tienes empresa, debes hacer declaraciones mensuales de impuestos. El IVA es 19% en la mayoría de los productos y servicios. Como extranjero con visa de temporario, si trabajas como dependiente tu tasa de impuesto será la que corresponda a tu renta. EsHighly recomendable contratar un contador local para la declaración anual de impuestos.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Trabajo y oportunidades</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El mercado laboral en Puerto Varas tiene oportunidades pero no es tan grande como Santiago. Los sectores con demanda son turismo, hotelería, construcción, servicios de salud y educación. Si trabajas remoto para una empresa fuera de Chile, puedes hacerlo sin problema siempre que tengas visa que te permita trabajar. El inglés es valorado, especialmente en turismo. El sueldo mínimo en Chile es aproximadamente $400.000 pesos mensuales. Los trabajos estacionales relacionados con el turismo peak season (diciembre a marzo) son comunes. También hay oportunidades para emprendedores en servicios para extranjeros o turismo de aventura.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Comunidad extranjera</h2><div class="text-gray-600 leading-relaxed prose max-w-none">La comunidad de extranjeros en Puerto Varas ha crecido significativamente. Hay grupos de Facebook como 'Gringos en Puerto Varas' donde puedes conectar con otros extranjeros, pedir recomendaciones y enterarte de eventos. Los argentinos son la comunidad más grande, seguidos de europeos (principalmente alemanes, españoles e italianos). Los fines de semana hay eventos sociales, fondas y actividades culturales. Los locales son amigables y curiosos por conocer otras culturas. Aprender español es fundamental para integrarte completamente. Practicar con los vecinos y en el comercio local es la mejor forma de mejorar tu idioma.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Checklist para tu mudanza</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Antes de llegar a Puerto Varas, asegúrate de tener: pasaporte vigente y visa al día, apostilla de documentos importantes (título profesional, partida de nacimiento, certificado de matrimonio si aplica), RUT temporal en el servicio de impuestos internos, cuenta bancaria abierta, plan de salud (Fonasa o Isapre), celular con chip chileno, contacto de un abogado de extranjería para cualquier duda. Trae ropa para lluvia y frío ya que el clima es húmedo. Si traes mascotas, necesitas certificado sanitario y microchip. El envío de container desde tu país puede tardar semanas, así que planifica con anticipación. Contrata un corretaje local para ayudarte a encontrar arriendo, ya que muchos departamentos no se arriendan a extranjeros sin garantía local.</div></div>
+    
+    <div class="bg-purple-50 rounded-xl p-6 mb-12"><h3 class="font-bold text-purple-900 mb-3">📚 Recursos útiles</h3><ul class="space-y-2"><li><a href="https://www.extranjeria.gob.cl" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.sii.cl" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.fonasa.cl" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.bcn.cl/siit/tramites" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.municipalidadpuertovaras.cl" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.facebook.com/groups/gringosenpuertoretas" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.bci.cl/guias/extranjeros" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li>
+          <li><a href="https://www.cancilleria.gob.ar/consulados/chile/puerto-montt" target="_blank" class="text-purple-600 hover:underline text-sm">[object Object]</a></li></ul></div>
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><div class="mb-12"><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details></div>
+    <div class="text-center bg-gray-50 rounded-2xl p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">¿Listo para dar el paso?</h2>
+      <p class="text-gray-600 mb-6">Explora propiedades disponibles en puerto varas y sus alrededores.</p>
+      <a href="https://tucorretaje.cl" target="_blank"
+        class="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-xl no-underline text-lg hover:opacity-90 transition-opacity"
+        style="background: #6D28D9;">
+        Ver propiedades disponibles
+      </a>
+    </div>
+  </section>
+</BaseLayout>

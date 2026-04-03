@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { funnelPages } from '../../data/content';
+const data = funnelPages['propiedades'] || {};
+---
+<BaseLayout title="Propiedades" description="Todo lo que necesitas saber sobre propiedades en puerto varas">
+  <section class="relative overflow-hidden" style="background: linear-gradient(135deg, #6D28D9 0%, #DB2777 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <span class="text-5xl mb-4 block">🏠</span>
+      <h1 class="text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4">Propiedades</h1>
+      <p class="text-white/80 text-xl max-w-3xl mb-8"></p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="https://tucorretaje.cl" target="_blank"
+          class="inline-flex items-center justify-center gap-2 bg-white font-bold px-8 py-4 rounded-xl no-underline text-lg hover:bg-gray-50 transition-colors"
+          style="color: #6D28D9;">
+          [object Object]
+        </a>
+        <a href="/barrios" class="inline-flex items-center justify-center gap-2 bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 no-underline text-lg hover:bg-white/30 transition-colors">
+          Explorar barrios
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">El mercado inmobiliario en Puerto Varas</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El mercado inmobiliario de Puerto Varas ha experimentado un crecimiento sostenido en los últimos años, impulsado por personas que buscan calidad de vida fuera de las grandes ciudades. La demanda de arriendo es alta, especialmente en temporada estival cuando llegan muchos turistas. Para compra, los precios han subido moderadamente, pero siguen siendo accesibles comparados con Santiago o Viña del Mar. Los departamentos nuevos en el centro son los más demandados, mientras que las casas con vista al lago en sectores como Champulli o Puerto Chico tienen precios más elevados. El corretaje local conoce bien la zona y puede ayudarte a encontrar la mejor opción según tu presupuesto y necesidades.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Tipos de propiedades disponibles</h2><div class="text-gray-600 leading-relaxed prose max-w-none">En Puerto Varas encontrarás una variedad de propiedades para todos los gustos y presupuestos. Los departamentos en el centro van desde estudios pequeños hasta amplios de 3 dormitorios, ideal para profesionales o parejas. Las casas son más comunes en los sectores residenciales como Villa Los Ulmos, El Bosque y Champulli, perfectas para familias. Hay departamentos nuevos con vista al lago y modernos amenities como piscina y gimnasio. Las casas patrimoniales en el centro son pocas pero muy cotizadas por su arquitectura. Para inversión, los departamentos amoblados para arriendo turístico son una opción rentable en temporada alta.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Barrios más cotizados</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El Centro de Puerto Varas es el más demandado por su cercanía al comercio, bancos y servicios. Puerto Chico ofrece un ambiente más tranquilo con vista al lago. Villa Los Ulmos y El Bosque son ideales para familias con buena conectividad al centro. Champulli es el sector premium con casas de mayor valor y vista privilegiada al Volcán Osorno. Ensenada atrae a quienes buscan un estilo de vida más rural pero con buena conectividad a Puerto Varas. Cada barrio tiene su encanto y el corretaje puede mostrarte las ventajas de cada sector según tu estilo de vida.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Proceso de compra de propiedad</h2><div class="text-gray-600 leading-relaxed prose max-w-none">El proceso de compra en Chile es transparente y regulado. Primero, el corredor te muestra las propiedades y juntos definen cuál se ajusta a tu presupuesto. Luego, se hace una oferta formal al propietario. Si aceptan, se firma un compromiso de compraventa y se paga un pie (generalmente 10-20% del valor). El tiempo para concretartransacción depende de si necesitas crédito hipotecario o no. Con crédito, el proceso puede tomar 30-60 días. El corretaje gestiona la escritura en notaría y el inscription en el Conservador de Bienes Raíces. Es importante tener toda la documentación en regla y contar con asesoramiento legal.</div></div>
+        <div class="mb-10"><h2 class="text-2xl font-bold text-gray-900 mb-3">Opciones de financiamiento</h2><div class="text-gray-600 leading-relaxed prose max-w-none">Si necesitas financiamiento, los bancos chilenos ofrecen créditos hipotecarios con buenas tasas para propiedades. Los bancos más activos en la zona son Banco Estado, Banco Santander, Banco de Chile y Scotiabank. La dividendo mensual puede ser similar o menor al arriendo, dependiendo del pie y el plazo. Para extranjeros con visa temporal, las opciones de crédito pueden ser más limitadas, por lo que contar con un pie mayor es recomendable. También existen programas de leasing habitacional y ahorro-programa para primera vivienda. El corretaje conoce las opciones y puede derivarte a los bancos más convenientes.</div></div>
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Propiedades destacadas</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"><div class="bg-white border border-gray-100 rounded-xl overflow-hidden"><div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center text-3xl">🏠</div><div class="p-4"><h3 class="font-bold text-gray-900">Departamento 2 Dormitorios en Centro</h3><p class="text-gray-500 text-sm"> ·  dorm ·  baños ·  m²</p><p class="font-bold mt-2" style="color: #6D28D9;"> UF</p></div></div>
+          <div class="bg-white border border-gray-100 rounded-xl overflow-hidden"><div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center text-3xl">🏠</div><div class="p-4"><h3 class="font-bold text-gray-900">Casa en Champulli con Vista al Volcán</h3><p class="text-gray-500 text-sm"> ·  dorm ·  baños ·  m²</p><p class="font-bold mt-2" style="color: #6D28D9;"> UF</p></div></div>
+          <div class="bg-white border border-gray-100 rounded-xl overflow-hidden"><div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center text-3xl">🏠</div><div class="p-4"><h3 class="font-bold text-gray-900">Departamento Amoblado Puerto Chico</h3><p class="text-gray-500 text-sm"> ·  dorm ·  baños ·  m²</p><p class="font-bold mt-2" style="color: #6D28D9;"> UF</p></div></div>
+          <div class="bg-white border border-gray-100 rounded-xl overflow-hidden"><div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center text-3xl">🏠</div><div class="p-4"><h3 class="font-bold text-gray-900">Casa Familiar en Villa Los Ulmos</h3><p class="text-gray-500 text-sm"> ·  dorm ·  baños ·  m²</p><p class="font-bold mt-2" style="color: #6D28D9;"> UF</p></div></div>
+          <div class="bg-white border border-gray-100 rounded-xl overflow-hidden"><div class="h-40 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center text-3xl">🏠</div><div class="p-4"><h3 class="font-bold text-gray-900">Estudio Premium en plena costanera</h3><p class="text-gray-500 text-sm"> ·  dorm ·  baños ·  m²</p><p class="font-bold mt-2" style="color: #6D28D9;"> UF</p></div></div></div>
+    
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2><div class="mb-12"><details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details>
+          <details class="border-b border-gray-100 pb-4"><summary class="font-semibold text-gray-900 cursor-pointer py-2"></summary><p class="text-gray-600 text-sm mt-2 pl-4"></p></details></div>
+    <div class="text-center bg-gray-50 rounded-2xl p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">¿Listo para dar el paso?</h2>
+      <p class="text-gray-600 mb-6">Explora propiedades disponibles en puerto varas y sus alrededores.</p>
+      <a href="https://tucorretaje.cl" target="_blank"
+        class="inline-flex items-center gap-2 text-white font-bold px-8 py-4 rounded-xl no-underline text-lg hover:opacity-90 transition-opacity"
+        style="background: #6D28D9;">
+        Ver propiedades disponibles
+      </a>
+    </div>
+  </section>
+</BaseLayout>
